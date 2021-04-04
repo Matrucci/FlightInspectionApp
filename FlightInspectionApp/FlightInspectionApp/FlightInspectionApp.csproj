@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,12 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="IModel.cs" />
-    <Compile Include="IObservable.cs" />
-    <Compile Include="IObserver.cs" />
-    <Compile Include="IView.cs" />
-    <Compile Include="ViewModelSwitching.cs" />
-    <Page Include="PreparationStage.xaml">
+    <Page Include="controls\playback.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -72,22 +68,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PreparationStage.xaml.cs">
-      <DependentUpon>PreparationStage.xaml</DependentUpon>
+    <Compile Include="Client.cs" />
+    <Compile Include="controls\playback.xaml.cs">
+      <DependentUpon>playback.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PresentationStage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PresentationStage.xaml.cs">
-      <DependentUpon>PresentationStage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -104,6 +94,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -112,6 +103,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\013-play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\003-stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\021-pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\029-previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\032-forwards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\033-next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\040-backward.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

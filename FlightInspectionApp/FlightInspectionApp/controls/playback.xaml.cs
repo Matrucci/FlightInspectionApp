@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FlightInspectionApp
+namespace FlightInspectionApp.controls
 {
     /// <summary>
-    /// Interaction logic for PresentationStage.xaml
+    /// Interaction logic for playback.xaml
     /// </summary>
-    public partial class PresentationStage : UserControl
+    public partial class playback : UserControl
     {
-        public PresentationStage()
+        public playback()
         {
             InitializeComponent();
         }
