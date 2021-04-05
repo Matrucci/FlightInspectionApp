@@ -52,11 +52,17 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <Compile Include="ButtonEventArgs.cs" />
+    <Compile Include="IModel.cs" />
+    <Compile Include="IObservable.cs" />
+    <Compile Include="IObserver.cs" />
+    <Compile Include="IView.cs" />
+    <Compile Include="ViewModel.cs" />
+    <Page Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Page Include="controls\playback.xaml">
+    </Page>
+    <Page Include="controls\Playback.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -69,8 +75,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Client.cs" />
-    <Compile Include="controls\playback.xaml.cs">
-      <DependentUpon>playback.xaml</DependentUpon>
+    <Compile Include="controls\Playback.xaml.cs">
+      <DependentUpon>Playback.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

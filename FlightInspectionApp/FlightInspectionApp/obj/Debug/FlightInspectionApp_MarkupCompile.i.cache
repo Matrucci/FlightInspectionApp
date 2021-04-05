@@ -9,12 +9,12 @@ FlightInspectionApp
 none
 false
 DEBUG;TRACE
-H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\App.xaml
-2917870555
 
-8-313662399
+3-1056585848
+
+142120837919
 141183416626
-controls\playback.xaml;MainWindow.xaml;
+App.xaml;controls\Playback.xaml;MainWindow.xaml;
 
-True
+False
 

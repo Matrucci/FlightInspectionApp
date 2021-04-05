@@ -15,3 +15,4 @@ H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspection
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\FlightInspectionApp.exe
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\FlightInspectionApp.pdb
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\FlightInspectionApp.csprojAssemblyReference.cache
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\App.baml

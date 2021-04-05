@@ -13,29 +13,29 @@
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="0">
-                <Button x:Name="skip_back" Height="50" Width="50" Margin="10, 10, 10, 10" Background="Transparent" BorderBrush="Transparent">
+                <Button x:Name="skip_back" Height="50" Width="50" Margin="10, 10, 10, 10" Background="Transparent" BorderBrush="Transparent" Click="skip_back_Click">
                     <Image Source="pack://application:,,,/Resources/029-previous.png"/>
                 </Button>
-                <Button x:Name="rewind" Height="50" Width="50" Margin="10, 10, 10, 10" Background="Transparent" BorderBrush="Transparent">
+                <Button x:Name="rewind" Height="50" Width="50" Margin="10, 10, 10, 10" Background="Transparent" BorderBrush="Transparent" Click="rewind_Click">
                     <Image Source="pack://application:,,,/Resources/040-backward.png"/>
                 </Button>
-                <Button x:Name="pause" Height="50" Width="50" Margin="10, 10, 10, 10" Background="Transparent" BorderBrush="Transparent">
+                <Button x:Name="pause" Height="50" Width="50" Margin="10, 10, 10, 10" Background="Transparent" BorderBrush="Transparent" Click="pause_Click">
                     <Image Source="pack://application:,,,/Resources/021-pause.png"/>
                 </Button>
-                <Button x:Name="play" Height="50" Width="50" Margin="10, 10, 10, 10" Background="Transparent" BorderBrush="Transparent">
+                <Button x:Name="play" Height="50" Width="50" Margin="10, 10, 10, 10" Background="Transparent" BorderBrush="Transparent" Click="play_Click">
                     <Image Source="pack://application:,,,/Resources/013-play.png"/>
                 </Button>
-                <Button x:Name="stop" Height="50" Width="50" Margin="10, 10, 10, 10" Background="Transparent" BorderBrush="Transparent">
+                <Button x:Name="stop" Height="50" Width="50" Margin="10, 10, 10, 10" Background="Transparent" BorderBrush="Transparent" Click="stop_Click">
                     <Image Source="pack://application:,,,/Resources/003-stop.png"/>
                 </Button>
-                <Button x:Name="forward" Height="50" Width="50" Margin="10, 10, 10, 10" Background="Transparent" BorderBrush="Transparent">
+                <Button x:Name="forward" Height="50" Width="50" Margin="10, 10, 10, 10" Background="Transparent" BorderBrush="Transparent" Click="forward_Click">
                     <Image Source="pack://application:,,,/Resources/032-forwards.png"/>
                 </Button>
-                <Button x:Name="end" Height="50" Width="50" Margin="10, 10, 10, 10" Background="Transparent" BorderBrush="Transparent">
+                <Button x:Name="end" Height="50" Width="50" Margin="10, 10, 10, 10" Background="Transparent" BorderBrush="Transparent" Click="end_Click">
                     <Image Source="pack://application:,,,/Resources/033-next.png"/>
                 </Button>
                 <TextBlock Text="Play Speed: " Margin="10, 20, 10, 10" TextWrapping="Wrap" Width="120" FontSize="20" TextAlignment="Center" />
-                <ComboBox Name="speed" Width="50" Height="25" Margin="5, 10, 10, 10">
+                <ComboBox Name="speed" Width="50" Height="25" Margin="5, 10, 10, 10" SelectionChanged="speed_SelectionChanged">
                     <ComboBoxItem Content="0.1" Name="speed_01"/>
                     <ComboBoxItem Content="0.25" Name="speed_025"/>
                     <ComboBoxItem Content="0.5" Name="speed_05"/>
