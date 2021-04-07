@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace FlightInspectionApp
 {
-    public interface IModel
+    public interface IModel : INotifyPropertyChanged
     {
         void SendFile(string path);
         void SetSpeed(double speed);
@@ -16,5 +17,6 @@ namespace FlightInspectionApp
         void Stop();
         void Start();
         void Pause();
+        void SetNumberOfElements(int value);
     }
 }

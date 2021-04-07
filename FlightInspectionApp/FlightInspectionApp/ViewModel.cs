@@ -4,20 +4,41 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace FlightInspectionApp
 {
-    public class ViewModel : IObserver, IObservable, INotifyPropertyChanged
+    public class ViewModel : IObserver, IObservable, INotifyPropertyChanged, IViewModel
     {
         private string csvPath;
         private string xmlPath;
         private List<IView> views = new List<IView>();
         private IModel model;
+        Thread t;
+
         //private IView view;
 
         public event PropertyChangedEventHandler PropertyChanged;
         public event Update Notify;
+
+        public int VM_LineNumber
+        {
+            get { return this.model.GetCurrentLine(); }
+            set
+            {
+                this.model.SetCurrentLine(value);
+            }
+        }
+
+        public int VM_NumberOfLines
+        {
+            get { return this.model.GetNumberOfElements(); }
+            set
+            {
+                this.model.SetNumberOfElements(value);
+            }
+        }
 
         public string CSVPath
         {
@@ -29,7 +50,7 @@ namespace FlightInspectionApp
                     this.csvPath = value;
                     if (PropertyChanged != null)
                     {
-                        PropertyChanged(this, new PropertyChangedEventArgs(this.csvPath));
+                        this.PropertyChanged(this, new PropertyChangedEventArgs(this.csvPath));
                         //PropertyChanged.Invoke(this, new PropertyChangedEventArgs(this.csvPath));
                     }
                 }
@@ -46,7 +67,7 @@ namespace FlightInspectionApp
                     this.xmlPath = value;
                     if (PropertyChanged != null)
                     {
-                        PropertyChanged(this, new PropertyChangedEventArgs(this.xmlPath));
+                        this.PropertyChanged(this, new PropertyChangedEventArgs(this.xmlPath));
                         //PropertyChanged.Invoke(this, new PropertyChangedEventArgs(this.xmlPath));
                     }
                 }
@@ -58,6 +79,7 @@ namespace FlightInspectionApp
             this.csvPath = string.Empty;
             this.xmlPath = string.Empty;
             this.model = new FlightGearClient();
+            this.model.PropertyChanged += OnPropertyChanged;
         }
         public ViewModel(IView view)
         {
@@ -66,8 +88,19 @@ namespace FlightInspectionApp
             this.model = new FlightGearClient();
             this.views.Add(view);
             //this.view = view;
-            this.model = new FlightGearClient();
-            
+            this.model.PropertyChanged += OnPropertyChanged;
+        }
+
+        public void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName.Equals("NumberOfLines"))
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs("VM_" + e.PropertyName));
+            }
+            else if (e.PropertyName.Equals("LineNumber"))
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs("VM_" + e.PropertyName));
+            }
         }
 
         void setModel(IModel model)
@@ -146,9 +179,12 @@ namespace FlightInspectionApp
                 //Get the path of specified file
                 CSVPath = openFileDialog.FileName;
                 //Console.WriteLine("Test::: " + CSVPath);
-                model.SendFile(csvPath);
-                
-                
+
+                //this.model.SendFile(csvPath);
+                this.t = new Thread(() => this.model.SendFile(csvPath));
+                this.t.Start();
+
+
                 //playback_controls.Visibility = Visibility.Visible;
                 /*
                 //Read the contents of the file into a stream
@@ -191,5 +227,19 @@ namespace FlightInspectionApp
             }
         }
 
+        public int GetMinimumSliderValue()
+        {
+            return 0;
+        }
+
+        public int GetMaximumSliderValue()
+        {
+            return this.model.GetNumberOfElements();
+        }
+
+        public int GetCurrentLine()
+        {
+            return this.model.GetCurrentLine();
+        }
     }
 }

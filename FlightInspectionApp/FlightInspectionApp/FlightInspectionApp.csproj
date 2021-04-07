@@ -57,6 +57,7 @@
     <Compile Include="IObservable.cs" />
     <Compile Include="IObserver.cs" />
     <Compile Include="IView.cs" />
+    <Compile Include="IViewModel.cs" />
     <Compile Include="ViewModel.cs" />
     <Page Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -74,7 +75,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Client.cs" />
+    <Compile Include="FlightGearClient.cs" />
     <Compile Include="controls\Playback.xaml.cs">
       <DependentUpon>Playback.xaml</DependentUpon>
     </Compile>

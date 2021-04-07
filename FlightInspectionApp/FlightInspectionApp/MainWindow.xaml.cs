@@ -28,6 +28,7 @@ namespace FlightInspectionApp
         private ViewModel vm;
         private string csvPath;
         private string xmlPath;
+     
         
         private string CSVPath
         {
@@ -62,21 +63,39 @@ namespace FlightInspectionApp
             InitializeComponent();
             upload_csv_btn.Visibility = Visibility.Hidden;
             this.vm = new ViewModel(this);
-            vm.PropertyChanged += OnXMLChange;
-            vm.PropertyChanged += OnCSVChange;
+            vm.PropertyChanged += OnPropertyChanged;
+
             this.playback_controls.Notify += OnPlayback;
+
+            //this.playback_controls.playback_slider.Minimum = 0;
+            //this.playback_controls.playback_slider.Maximum = 2170;
+
+            DataContext = this.vm;
+            /*
+            Binding binding = new Binding("Value");
+            binding.Source = this.vm.VM_LineNumber;
+            this.playback_controls.playback_slider.DataContext = this.vm.VM_LineNumber;
+            this.playback_controls.playback_slider.SetBinding(Slider.ValueProperty, binding);*/
+
+            /*
+            this.playback_controls.playback_slider.Minimum = 0;
+            this.playback_controls.playback_slider.Maximum = 2170;
+            this.playback_controls.playback_slider.DataContext = this.vm.VM_LineNumber;
+            */
+            
         }
 
         public MainWindow(ViewModel vm)
         {
+            InitializeComponent();
             this.vm = vm;
-            vm.PropertyChanged += OnXMLChange;
-            vm.PropertyChanged += OnCSVChange;
+            vm.PropertyChanged += OnPropertyChanged;
             //vm.PropertyChanged += OnTest;
             //vm.CSVPath.bind(CSVPath);
             
-            InitializeComponent();
             upload_csv_btn.Visibility = Visibility.Hidden;
+
+            this.playback_controls.Notify += OnPlayback;
         }
 
         public void OnPlayback(object sender, EventArgs e)
@@ -95,26 +114,32 @@ namespace FlightInspectionApp
             Console.WriteLine(e.PropertyName.ToString());
         }*/
 
-        public void OnXMLChange(object sender, PropertyChangedEventArgs e)
+
+        public void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            
-            string result = Regex.Match(e.PropertyName, @"(.{3})\s*$").ToString();
-            if (result.Equals("xml"))
+            //Console.WriteLine(e.PropertyName);
+            if (e.PropertyName.Equals("VM_NumberOfLines"))
+            {
+                
+                //this.playback_controls.playback_slider.Maximum = this.vm.GetMaximumSliderValue();
+                //this.playback_controls.playback_slider.Minimum = this.vm.GetMinimumSliderValue();
+            } 
+            else if (Regex.Match(e.PropertyName, @"(.{3})\s*$").ToString().Equals("xml"))
             {
                 this.xmlPath = e.PropertyName;
                 upload_csv_btn.Visibility = Visibility.Visible;
             }
-        }
-
-        public void OnCSVChange(object sender, PropertyChangedEventArgs e)
-        {
-            string result = Regex.Match(e.PropertyName, @"(.{3})\s*$").ToString();
-            if (result.Equals("csv"))
+            else if (Regex.Match(e.PropertyName, @"(.{3})\s*$").ToString().Equals("csv"))
             {
                 this.csvPath = e.PropertyName;
                 playback_controls.Visibility = Visibility.Visible;
             }
+            else if (e.PropertyName.Equals("VM_LineNumber"))
+            {
+                //this.playback_controls.playback_slider.Value = this.vm.GetMaximumSliderValue();
+            }
         }
+
 
         public void SetVM(ViewModel vm)
         {
@@ -123,12 +148,12 @@ namespace FlightInspectionApp
 
         private void Upload_xml_btn_Click(object sender, RoutedEventArgs e)
         {
-            vm.XmlButtonClick();
+            this.vm.XmlButtonClick();
         }
 
         private void Upload_csv_btn_Click(object sender, RoutedEventArgs e)
         {
-            vm.CsvButtonClick();
+            this.vm.CsvButtonClick();
         }
     }
 }
