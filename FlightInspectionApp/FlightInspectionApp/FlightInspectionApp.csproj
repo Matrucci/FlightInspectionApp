@@ -53,8 +53,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ButtonEventArgs.cs" />
+    <Compile Include="controls\HUD.xaml.cs">
+      <DependentUpon>HUD.xaml</DependentUpon>
+    </Compile>
     <Compile Include="controls\Joystick.xaml.cs">
       <DependentUpon>Joystick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\PitchRoll.xaml.cs">
+      <DependentUpon>PitchRoll.xaml</DependentUpon>
     </Compile>
     <Compile Include="IModel.cs" />
     <Compile Include="IObservable.cs" />
@@ -66,7 +72,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="controls\HUD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="controls\Joystick.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\PitchRoll.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

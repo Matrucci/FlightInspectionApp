@@ -266,7 +266,8 @@ namespace FlightInspectionApp
                 List<float> roll = mapCSV["roll-deg"];
                 List<float> pitch = mapCSV["pitch-deg"];
                 List<float> yaw = mapCSV["heading-deg"];
-                List<float> airSpeed = mapCSV["airspeed-kt"];
+                List<float> airSpeed = mapCSV["airspeed-indicator_indicated-speed-kt"];
+                List<float> altimeter = mapCSV["altimeter_indicated-altitude-ft"];
 
                 this.isRunning = true;
                 TcpClient client = new TcpClient("127.0.0.1", this.port);
@@ -291,9 +292,12 @@ namespace FlightInspectionApp
                     Throttle = throttle[this.lineNumber];
                     Aileron = aileron[this.lineNumber];
                     Rudder = rudder[this.lineNumber];
+
                     Yaw = yaw[this.lineNumber];
                     Roll = roll[this.lineNumber];
                     Pitch = pitch[this.lineNumber];
+                    Altimeter = altimeter[this.lineNumber];
+                    AirSpeed = airSpeed[this.lineNumber];
                     LineNumber++;
                     mutex.ReleaseMutex();
                     line = data.ElementAt(LineNumber);

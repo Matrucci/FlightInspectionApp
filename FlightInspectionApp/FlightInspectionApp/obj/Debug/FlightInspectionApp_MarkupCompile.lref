@@ -1,7 +1,9 @@
 ﻿
 
 FH:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\App.xaml;;
-FH:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\controls\playback.xaml;;
-FH:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\MainWindow.xaml;;
+FH:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\controls\HUD.xaml;;
 FH:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\controls\Joystick.xaml;;
+FH:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\controls\Playback.xaml;;
+FH:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\MainWindow.xaml;;
+FH:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\controls\PitchRoll.xaml;;
 

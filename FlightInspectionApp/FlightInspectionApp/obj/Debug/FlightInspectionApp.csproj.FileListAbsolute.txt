@@ -18,3 +18,7 @@ H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspection
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\App.baml
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\controls\Joystick.baml
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\controls\Joystick.g.cs
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\controls\HUD.g.cs
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\controls\HUD.baml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\controls\PitchRoll.g.cs
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\controls\PitchRoll.baml

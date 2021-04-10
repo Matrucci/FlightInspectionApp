@@ -30,12 +30,54 @@ namespace FlightInspectionApp
 
         public float VM_Altimeter
         {
-            get { return this.model.Altimeter; }
+            get
+            {
+                float altimeter = this.model.Altimeter;
+                float altimeterR = (float)Math.Round(altimeter * 100f) / 100f;
+                return altimeterR;
+            }
+        }
+
+        public float VM_Altimeter_Top
+        {
+            get
+            {
+                return VM_Altimeter + 100;
+            }
+        }
+
+        public float VM_Altimeter_Bot
+        {
+            get
+            {
+                return VM_Altimeter - 100;
+            }
         }
 
         public float VM_AirSpeed
         {
-            get { return this.model.AirSpeed; }
+            get
+            {
+                float airSpeed = this.model.AirSpeed;
+                float airSpeedR = (float)Math.Round(airSpeed * 100f) / 100f;
+                return airSpeedR;
+            }
+        }
+
+        public float VM_AirSpeed_Center
+        {
+            get
+            {
+                return VM_AirSpeed + 50;
+            }
+        }
+
+        public float VM_AirSpeed_Top
+        {
+            get
+            {
+                return VM_AirSpeed + 100;
+            }
         }
 
         public float VM_Direction
@@ -55,8 +97,34 @@ namespace FlightInspectionApp
 
         public float VM_Yaw
         {
-            get { return this.model.Yaw; }
+            get
+            {
+                float yaw = this.model.Yaw;
+                float yawR = (float)Math.Round(yaw * 100f) / 100f;
+                return yawR;
+            }
         }
+
+        public float VM_Yaw_Left
+        {
+            get
+            {
+                float left = (VM_Yaw - 50) % 360;
+                float leftR = (float)Math.Round(left * 100f) / 100f;
+                return leftR;
+            }
+        }
+
+        public float VM_Yaw_Right
+        {
+            get
+            {
+                float right = (VM_Yaw + 50) % 360;
+                float rightR = (float)Math.Round(right * 100f) / 100f;
+                return rightR;
+            }
+        }
+
         public float VM_Throttle
         {
             get { return this.model.Throttle; }
@@ -158,6 +226,21 @@ namespace FlightInspectionApp
 
         public void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
+            if (e.PropertyName.Equals("Yaw"))
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs("VM_Yaw_Left"));
+                this.PropertyChanged(this, new PropertyChangedEventArgs("VM_Yaw_Right"));
+            } 
+            else if (e.PropertyName.Equals("AirSpeed"))
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs("VM_AirSpeed_Top"));
+                this.PropertyChanged(this, new PropertyChangedEventArgs("VM_AirSpeed_Center"));
+            }
+            else if (e.PropertyName.Equals("Altimeter"))
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs("VM_Altimeter_Top"));
+                this.PropertyChanged(this, new PropertyChangedEventArgs("VM_Altimeter_Bot"));
+            }
             this.PropertyChanged(this, new PropertyChangedEventArgs("VM_" + e.PropertyName));
             /*
             if (e.PropertyName.Equals("NumberOfLines"))

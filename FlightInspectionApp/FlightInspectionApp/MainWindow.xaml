@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FlightInspectionApp"
         mc:Ignorable="d"
         xmlns:Controls="clr-namespace:FlightInspectionApp.controls"
-        Title="Main App" Height="600" Width="800">
+        Title="Main App" Height="750" Width="1500">
 
     <Grid Background="Black">
         <StackPanel Orientation="Vertical">
@@ -16,6 +16,8 @@
                     <!--TODO add names-->
                     <Slider Name="slider_throttle" Height="340" HorizontalAlignment="Left" Margin="10, 10, 10, 10" Orientation="Vertical" Value="{Binding VM_Throttle}" Minimum="0" Maximum="1"/>
                     <Controls:Joystick x:Name="joystick" HorizontalAlignment="Left" Margin="10, 10, 10, 10"/>
+                    <Controls:HUD Margin="30,0,0,0" Width="350" Height="350"/>
+                    <Controls:PitchRoll Margin="10,0,0,0"/>
                 </StackPanel>
                 <!--TODO add names-->
                 <Slider Name="slider_rudder" Width="340" HorizontalAlignment="Left" Margin="45, 10, 10, 10" Value="{Binding VM_Rudder}" Minimum="-1" Maximum="1"/>
