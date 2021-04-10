@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-3-1056585848
+42060282640
 
-14324565790
+15933072108
 141183416626
-App.xaml;controls\Playback.xaml;MainWindow.xaml;
+App.xaml;controls\Joystick.xaml;controls\Playback.xaml;MainWindow.xaml;
 
 False
 

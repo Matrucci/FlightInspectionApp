@@ -16,3 +16,5 @@ H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspection
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\FlightInspectionApp.pdb
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\FlightInspectionApp.csprojAssemblyReference.cache
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\App.baml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\controls\Joystick.baml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\controls\Joystick.g.cs

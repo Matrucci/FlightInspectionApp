@@ -29,7 +29,6 @@ namespace FlightInspectionApp
         private string csvPath;
         private string xmlPath;
      
-        
         private string CSVPath
         {
             get { return this.csvPath; }
@@ -42,6 +41,7 @@ namespace FlightInspectionApp
                 }
             }
         }
+
         private string XMLPath
         {
             get { return this.xmlPath; }
@@ -55,9 +55,6 @@ namespace FlightInspectionApp
             }
         }
 
-        //string xmlPath = String.Empty;
-        //string csvPath = String.Empty;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -67,22 +64,8 @@ namespace FlightInspectionApp
 
             this.playback_controls.Notify += OnPlayback;
 
-            //this.playback_controls.playback_slider.Minimum = 0;
-            //this.playback_controls.playback_slider.Maximum = 2170;
-
             DataContext = this.vm;
-            /*
-            Binding binding = new Binding("Value");
-            binding.Source = this.vm.VM_LineNumber;
-            this.playback_controls.playback_slider.DataContext = this.vm.VM_LineNumber;
-            this.playback_controls.playback_slider.SetBinding(Slider.ValueProperty, binding);*/
 
-            /*
-            this.playback_controls.playback_slider.Minimum = 0;
-            this.playback_controls.playback_slider.Maximum = 2170;
-            this.playback_controls.playback_slider.DataContext = this.vm.VM_LineNumber;
-            */
-            
         }
 
         public MainWindow(ViewModel vm)
@@ -90,8 +73,6 @@ namespace FlightInspectionApp
             InitializeComponent();
             this.vm = vm;
             vm.PropertyChanged += OnPropertyChanged;
-            //vm.PropertyChanged += OnTest;
-            //vm.CSVPath.bind(CSVPath);
             
             upload_csv_btn.Visibility = Visibility.Hidden;
 
@@ -107,39 +88,31 @@ namespace FlightInspectionApp
             }
         }
 
-        /*
-        public void OnTest(object sender, PropertyChangedEventArgs e)
-        {
-            Console.WriteLine("TEST!!");
-            Console.WriteLine(e.PropertyName.ToString());
-        }*/
-
 
         public void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            //Console.WriteLine(e.PropertyName);
-            if (e.PropertyName.Equals("VM_NumberOfLines"))
-            {
-                
-                //this.playback_controls.playback_slider.Maximum = this.vm.GetMaximumSliderValue();
-                //this.playback_controls.playback_slider.Minimum = this.vm.GetMinimumSliderValue();
-            } 
-            else if (Regex.Match(e.PropertyName, @"(.{3})\s*$").ToString().Equals("xml"))
+            if (Regex.Match(e.PropertyName, @"(.{3})\s*$").ToString().Equals("xml"))
             {
                 this.xmlPath = e.PropertyName;
                 upload_csv_btn.Visibility = Visibility.Visible;
+                upload_xml_btn.Visibility = Visibility.Hidden;
             }
             else if (Regex.Match(e.PropertyName, @"(.{3})\s*$").ToString().Equals("csv"))
             {
                 this.csvPath = e.PropertyName;
-                playback_controls.Visibility = Visibility.Visible;
+                this.playback_controls.Visibility = Visibility.Visible;
+                this.controllers.Visibility = Visibility.Visible;
+                upload_csv_btn.Visibility = Visibility.Hidden;
             }
-            else if (e.PropertyName.Equals("VM_LineNumber"))
+            /*else if (e.PropertyName.Equals("VM_Elevator"))
             {
-                //this.playback_controls.playback_slider.Value = this.vm.GetMaximumSliderValue();
+                this.joystick.knobPosition.X = this.vm.VM_Elevator;
             }
+            else if (e.PropertyName.Equals("VM_Aileron"))
+            {
+                this.joystick.knobPosition.X = this.vm.VM_Aileron;
+            }*/
         }
-
 
         public void SetVM(ViewModel vm)
         {

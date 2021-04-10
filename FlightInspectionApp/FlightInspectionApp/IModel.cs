@@ -18,5 +18,6 @@ namespace FlightInspectionApp
         void Start();
         void Pause();
         void SetNumberOfElements(int value);
+        void ParseFile(string path);
     }
 }

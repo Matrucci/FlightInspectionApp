@@ -9,18 +9,86 @@ using System.Threading.Tasks;
 
 namespace FlightInspectionApp
 {
-    public class ViewModel : IObserver, IObservable, INotifyPropertyChanged, IViewModel
+    public class ViewModel : INotifyPropertyChanged, IViewModel
     {
         private string csvPath;
         private string xmlPath;
-        private List<IView> views = new List<IView>();
-        private IModel model;
+        private IView view;
+        private FlightGearClient model;
+        //private IModel model;
         Thread t;
 
-        //private IView view;
-
         public event PropertyChangedEventHandler PropertyChanged;
-        public event Update Notify;
+
+        private int ConvertValues(float value)
+        {
+            int oldRange = 2;
+            int newRange = 90;
+            int newValue = (int)(((value - (-1)) * newRange) / oldRange) + 80;
+            return newValue;
+        }
+
+        public float VM_Altimeter
+        {
+            get { return this.model.Altimeter; }
+        }
+
+        public float VM_AirSpeed
+        {
+            get { return this.model.AirSpeed; }
+        }
+
+        public float VM_Direction
+        {
+            get { return this.model.Direction; }
+        }
+
+        public float VM_Roll
+        {
+            get { return this.model.Roll; }
+        }
+
+        public float VM_Pitch
+        {
+            get { return this.model.Pitch; }
+        }
+
+        public float VM_Yaw
+        {
+            get { return this.model.Yaw; }
+        }
+        public float VM_Throttle
+        {
+            get { return this.model.Throttle; }
+            set
+            {
+                this.model.Throttle = value;
+            }
+        }
+        public float VM_Rudder
+        {
+            get { return this.model.Rudder; }
+            set
+            {
+                this.model.Rudder = value;
+            }
+        }
+        public float VM_Aileron
+        {
+            get { return ConvertValues(this.model.Aileron); }
+            set
+            {
+                this.model.Aileron = value;
+            }
+        }
+        public float VM_Elevator
+        {
+            get { return ConvertValues(this.model.Elevator); }
+            set
+            {
+                this.model.Elevator = value;
+            }
+        }
 
         public int VM_LineNumber
         {
@@ -51,7 +119,6 @@ namespace FlightInspectionApp
                     if (PropertyChanged != null)
                     {
                         this.PropertyChanged(this, new PropertyChangedEventArgs(this.csvPath));
-                        //PropertyChanged.Invoke(this, new PropertyChangedEventArgs(this.csvPath));
                     }
                 }
             }
@@ -68,7 +135,6 @@ namespace FlightInspectionApp
                     if (PropertyChanged != null)
                     {
                         this.PropertyChanged(this, new PropertyChangedEventArgs(this.xmlPath));
-                        //PropertyChanged.Invoke(this, new PropertyChangedEventArgs(this.xmlPath));
                     }
                 }
             }
@@ -86,13 +152,14 @@ namespace FlightInspectionApp
             this.csvPath = string.Empty;
             this.xmlPath = string.Empty;
             this.model = new FlightGearClient();
-            this.views.Add(view);
-            //this.view = view;
+            this.view = view;
             this.model.PropertyChanged += OnPropertyChanged;
         }
 
         public void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
+            this.PropertyChanged(this, new PropertyChangedEventArgs("VM_" + e.PropertyName));
+            /*
             if (e.PropertyName.Equals("NumberOfLines"))
             {
                 this.PropertyChanged(this, new PropertyChangedEventArgs("VM_" + e.PropertyName));
@@ -100,18 +167,17 @@ namespace FlightInspectionApp
             else if (e.PropertyName.Equals("LineNumber"))
             {
                 this.PropertyChanged(this, new PropertyChangedEventArgs("VM_" + e.PropertyName));
-            }
+            }*/
         }
 
-        void setModel(IModel model)
+        void setModel(FlightGearClient model)
         {
             this.model = model;
         }
 
         public void setView(IView view)
         {
-            //this.view = view;
-            this.views.Add(view);
+            this.view = view;
         }
 
         public void PlaybackControl(ButtonEventArgs be)
@@ -173,27 +239,12 @@ namespace FlightInspectionApp
 
             if (openFileDialog.ShowDialog() == true)
             {
-                //upload_csv_btn.Content = openFileDialog.SafeFileName;
-                
-                
                 //Get the path of specified file
                 CSVPath = openFileDialog.FileName;
-                //Console.WriteLine("Test::: " + CSVPath);
+                this.model.ParseFile(CSVPath);
 
-                //this.model.SendFile(csvPath);
                 this.t = new Thread(() => this.model.SendFile(csvPath));
                 this.t.Start();
-
-
-                //playback_controls.Visibility = Visibility.Visible;
-                /*
-                //Read the contents of the file into a stream
-                var fileStream = openFileDialog.OpenFile();
-
-                using (StreamReader reader = new StreamReader(fileStream))
-                {
-                    fileContent = reader.ReadToEnd();
-                }*/
             }
         }
 
@@ -206,24 +257,9 @@ namespace FlightInspectionApp
 
             if (openFileDialog.ShowDialog() == true)
             {
-                //upload_xml_btn.Content = openFileDialog.SafeFileName;
-                //upload_csv_btn.Visibility = Visibility.Visible;
-                
-                
                 //Get the path of specified file
                 XMLPath = openFileDialog.FileName;
-
-                //Console.WriteLine("Test::: " + XMLPath);
-
-
-                /*
-                //Read the contents of the file into a stream
-                var fileStream = openFileDialog.OpenFile();
-
-                using (StreamReader reader = new StreamReader(fileStream))
-                {
-                    fileContent = reader.ReadToEnd();
-                }*/
+                this.model.ParseFile(XMLPath);
             }
         }
 
