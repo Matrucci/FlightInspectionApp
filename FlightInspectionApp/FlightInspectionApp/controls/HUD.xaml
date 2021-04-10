@@ -16,14 +16,16 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="100"/>
         </Grid.ColumnDefinitions>
-        <!--Direction - Top panel-->
+        <!--Direction (yaw) - Top panel-->
         <Border Background="#FF4798EA" Grid.ColumnSpan="3" CornerRadius="10,10,0,0"/>
         <Polygon Points="155,0 175,10, 195,0" Stroke="Black" Fill="Red" Grid.ColumnSpan="3"/>
         <Polygon Points="155,50 175,40, 195,50" Stroke="Black" Fill="Red" Grid.ColumnSpan="3"/>
 
+        <!--Left degree lines-->
         <Line X1="25" Y1="0" X2="25" Y2="15" Stroke="Black" StrokeThickness="2" Grid.ColumnSpan="3"/>
         <Line X1="25" Y1="35" X2="25" Y2="50" Stroke="Black" StrokeThickness="2" Grid.ColumnSpan="3"/>
 
+        <!--Separators-->
         <Line X1="65" Y1="15" X2="65" Y2="35" Stroke="Black" StrokeThickness="2" Grid.ColumnSpan="3"/>
         <Line X1="100" Y1="15" X2="100" Y2="35" Stroke="Black" StrokeThickness="2" Grid.ColumnSpan="3"/>
         <Line X1="135" Y1="15" X2="135" Y2="35" Stroke="Black" StrokeThickness="2" Grid.ColumnSpan="3"/>
@@ -31,6 +33,7 @@
         <Line X1="250" Y1="15" X2="250" Y2="35" Stroke="Black" StrokeThickness="2" Grid.ColumnSpan="3"/>
         <Line X1="285" Y1="15" X2="285" Y2="35" Stroke="Black" StrokeThickness="2" Grid.ColumnSpan="3"/>
 
+        <!--Right degree lines-->
         <Line X1="325" Y1="0" X2="325" Y2="15" Stroke="Black" StrokeThickness="2" Grid.ColumnSpan="3"/>
         <Line X1="325" Y1="35" X2="325" Y2="50" Stroke="Black" StrokeThickness="2" Grid.ColumnSpan="3"/>
         <TextBlock Text="{Binding VM_Yaw}" Name="direction_deg" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Grid.ColumnSpan="3" FontWeight="Bold"/>
@@ -54,8 +57,8 @@
         <Line X1="30" Y1="190" X2="70" Y2="190" Stroke="Black" StrokeThickness="2" Grid.Row="1"/>
 
         <TextBlock Text="{Binding VM_AirSpeed}" Name="airspeed" FontSize="15" TextAlignment="Center" VerticalAlignment="Bottom" Grid.Row="1" Height="30" FontWeight="Bold"/>
-        <Line X1="0" Y1="280" X2="10" Y2="280" Stroke="Black" StrokeThickness="4" Grid.Row="1"/>
-        <Line X1="100" Y1="280" X2="90" Y2="280" Stroke="Black" StrokeThickness="4" Grid.Row="1"/>
+        <Line X1="0" Y1="280" X2="10" Y2="280" Stroke="Red" StrokeThickness="4" Grid.Row="1"/>
+        <Line X1="100" Y1="280" X2="90" Y2="280" Stroke="Red" StrokeThickness="4" Grid.Row="1"/>
 
         
 
@@ -69,8 +72,8 @@
         <Line X1="30" Y1="90" X2="70" Y2="90" Stroke="Black" StrokeThickness="2" Grid.Row="1" Grid.Column="2"/>
 
         <TextBlock Text="{Binding VM_Altimeter}" Name="altimeter" FontSize="15" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="2" Height="30" FontWeight="Bold"/>
-        <Line X1="0" Y1="145" X2="10" Y2="145" Stroke="Black" StrokeThickness="4" Grid.Row="1" Grid.Column="2"/>
-        <Line X1="100" Y1="145" X2="90" Y2="145" Stroke="Black" StrokeThickness="4" Grid.Row="1" Grid.Column="2"/>
+        <Line X1="0" Y1="145" X2="10" Y2="145" Stroke="Red" StrokeThickness="4" Grid.Row="1" Grid.Column="2"/>
+        <Line X1="100" Y1="145" X2="90" Y2="145" Stroke="Red" StrokeThickness="4" Grid.Row="1" Grid.Column="2"/>
 
         <Line X1="30" Y1="230" X2="70" Y2="230" Stroke="Black" StrokeThickness="2" Grid.Row="1" Grid.Column="2"/>
         <Line X1="30" Y1="190" X2="70" Y2="190" Stroke="Black" StrokeThickness="2" Grid.Row="1" Grid.Column="2"/>

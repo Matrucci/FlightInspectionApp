@@ -14,6 +14,11 @@ using System.Xml;
 
 namespace FlightInspectionApp
 {
+    /***************************
+     * FlightGear Client.
+     * The model of the project.
+     * Dealing with the backend.
+     ***************************/
     public class FlightGearClient : IModel
     {
         private const float TIME_JUMPS = 1;
@@ -23,6 +28,7 @@ namespace FlightInspectionApp
         public List<float> SelectedColumnsXOne;
         public List<float> SelectedColumnsXTwo;
 
+        //Flight inspection variables.
         private float throttle;
         private float rudder;
         private float aileron;
@@ -34,6 +40,7 @@ namespace FlightInspectionApp
         private float roll;
         private float yaw;
 
+        //Class variables holding critiral data.
         private double playbackSpeed;
         private int port;
         private int lineNumber;
@@ -45,6 +52,7 @@ namespace FlightInspectionApp
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        //Constructor
         public FlightGearClient()
         {
             this.port = 5400;
@@ -62,6 +70,7 @@ namespace FlightInspectionApp
             this.playbackSpeed = 10;
         }
 
+        //Properties
         public string SelectedItem { get; set; }
 
         public float Altimeter
@@ -253,8 +262,11 @@ namespace FlightInspectionApp
             }
         }
 
-
-        public void SendFile(string path) //Sending the CSV file
+        /*******************************************
+         * Sending the csv to the flight gear
+         * while updating the necessary properties.
+         ******************************************/
+        public void SendFile(string path) 
         {
             try
             {
@@ -276,23 +288,23 @@ namespace FlightInspectionApp
                 var data = File.ReadLines(path);
 
                 mutex.WaitOne();
-                NumberOfLines = data.Count() - 1;
+                NumberOfLines = data.Count() - 2;
                 LineNumber = 0;
                 mutex.ReleaseMutex();
 
                 string line = data.ElementAt(LineNumber);
-                while (line != null)
+                while (this.lineNumber < this.numberOfLines)
                 {
                     Byte[] dataBytes = System.Text.Encoding.ASCII.GetBytes(line + "\r\n");
                     stream.Write(dataBytes, 0, dataBytes.Length);
-                    //Console.WriteLine("Line:  " + LineNumber);
                     Thread.Sleep((int)(1000 / this.playbackSpeed));
                     mutex.WaitOne();
+
+                    //Updating the properties
                     Elevator = elevator[this.lineNumber];
                     Throttle = throttle[this.lineNumber];
                     Aileron = aileron[this.lineNumber];
                     Rudder = rudder[this.lineNumber];
-
                     Yaw = yaw[this.lineNumber];
                     Roll = roll[this.lineNumber];
                     Pitch = pitch[this.lineNumber];
@@ -314,6 +326,7 @@ namespace FlightInspectionApp
             }
         }
 
+        //Setting the playback speed
         public void SetSpeed(double newPlayBackSpeed)
         {
             mutex.WaitOne();
@@ -321,11 +334,13 @@ namespace FlightInspectionApp
             mutex.ReleaseMutex();
         }
 
+        //Getting the current line
         public int GetCurrentLine()
         {
             return this.lineNumber;
         }
 
+        //Setting the current line
         public void SetCurrentLine(int line)
         {
             mutex.WaitOne();
@@ -333,14 +348,17 @@ namespace FlightInspectionApp
             mutex.ReleaseMutex();
         }
 
+        //Getting the number of lines
         public int GetNumberOfElements()
         {
             return this.numberOfLines;
         }
 
+        //Pausing the thread and sending it back to the start.
         public void Stop()
         {
             LineNumber = 0;
+            Thread.Sleep(200);
             if (this.isRunning == true)
             {
                 this.isRunning = false;
@@ -348,7 +366,8 @@ namespace FlightInspectionApp
             }
         }
 
-        public void Start()
+        //Playing the thread.
+        public void Play()
         {
             if (this.isRunning == false)
             {
@@ -357,6 +376,7 @@ namespace FlightInspectionApp
             }
         }
 
+        //Pausing the sending.
         public void Pause()
         {
             if (this.isRunning == true)
@@ -366,11 +386,13 @@ namespace FlightInspectionApp
             }
         }
 
+        //Setting the number of lines (not very much in use).
         public void SetNumberOfElements(int value)
         {
             NumberOfLines = value;
         }
 
+        //Checking which file we got and sending to the correct parse method.
         public void ParseFile(string path)
         {
             if (Regex.Match(path, @"(.{3})\s*$").ToString().Equals("xml"))

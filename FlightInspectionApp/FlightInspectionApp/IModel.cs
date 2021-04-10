@@ -15,7 +15,7 @@ namespace FlightInspectionApp
         void SetCurrentLine(int line);
         int GetNumberOfElements();
         void Stop();
-        void Start();
+        void Play();
         void Pause();
         void SetNumberOfElements(int value);
         void ParseFile(string path);

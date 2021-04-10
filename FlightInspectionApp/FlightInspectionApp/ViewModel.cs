@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace FlightInspectionApp
 {
+    /********************
+     * View model class.
+     *******************/
     public class ViewModel : INotifyPropertyChanged, IViewModel
     {
         private string csvPath;
@@ -20,6 +23,10 @@ namespace FlightInspectionApp
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /**********************************************
+         * Convert the ranges: -1  -  1 to 80  -  170
+         * in order for the joystick to work.
+         *********************************************/
         private int ConvertValues(float value)
         {
             int oldRange = 2;
@@ -28,6 +35,7 @@ namespace FlightInspectionApp
             return newValue;
         }
 
+        //Properties
         public float VM_Altimeter
         {
             get
@@ -208,6 +216,7 @@ namespace FlightInspectionApp
             }
         }
 
+        //Constructors
         public ViewModel()
         {
             this.csvPath = string.Empty;
@@ -242,27 +251,21 @@ namespace FlightInspectionApp
                 this.PropertyChanged(this, new PropertyChangedEventArgs("VM_Altimeter_Bot"));
             }
             this.PropertyChanged(this, new PropertyChangedEventArgs("VM_" + e.PropertyName));
-            /*
-            if (e.PropertyName.Equals("NumberOfLines"))
-            {
-                this.PropertyChanged(this, new PropertyChangedEventArgs("VM_" + e.PropertyName));
-            }
-            else if (e.PropertyName.Equals("LineNumber"))
-            {
-                this.PropertyChanged(this, new PropertyChangedEventArgs("VM_" + e.PropertyName));
-            }*/
         }
 
+        //Setting the model
         void setModel(FlightGearClient model)
         {
             this.model = model;
         }
 
+        //Setting the view
         public void setView(IView view)
         {
             this.view = view;
         }
 
+        //Dealing with playback controls press.
         public void PlaybackControl(ButtonEventArgs be)
         {
             if (be.GetDescription() == "playback speed")
@@ -290,7 +293,7 @@ namespace FlightInspectionApp
             }
             else if (be.GetDescription() == "play")
             {
-                this.model.Start();
+                this.model.Play();
             }
             else if (be.GetDescription() == "stop")
             {
@@ -313,6 +316,8 @@ namespace FlightInspectionApp
             }
         }
 
+
+        //Getting a CSV from the user.
         public void CsvButtonClick()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -331,6 +336,8 @@ namespace FlightInspectionApp
             }
         }
 
+
+        //Getting an XML from the user
         public void XmlButtonClick()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -345,6 +352,7 @@ namespace FlightInspectionApp
                 this.model.ParseFile(XMLPath);
             }
         }
+
 
         public int GetMinimumSliderValue()
         {

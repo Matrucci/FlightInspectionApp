@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace FlightInspectionApp
 {
+    /*******************************************
+     * Button click event.
+     * Mainly used for the playback controllers.
+     *******************************************/
     public class ButtonEventArgs : EventArgs
     {
         private string description;

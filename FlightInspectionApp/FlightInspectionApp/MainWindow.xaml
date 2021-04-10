@@ -13,13 +13,11 @@
             <Controls:playback Visibility="Hidden" x:Name="playback_controls"/>
             <StackPanel Orientation="Vertical" Name="controllers" Visibility="Hidden">
                 <StackPanel Orientation="Horizontal">
-                    <!--TODO add names-->
                     <Slider Name="slider_throttle" Height="340" HorizontalAlignment="Left" Margin="10, 10, 10, 10" Orientation="Vertical" Value="{Binding VM_Throttle}" Minimum="0" Maximum="1"/>
                     <Controls:Joystick x:Name="joystick" HorizontalAlignment="Left" Margin="10, 10, 10, 10"/>
                     <Controls:HUD Margin="30,0,0,0" Width="350" Height="350"/>
                     <Controls:PitchRoll Margin="10,0,0,0"/>
                 </StackPanel>
-                <!--TODO add names-->
                 <Slider Name="slider_rudder" Width="340" HorizontalAlignment="Left" Margin="45, 10, 10, 10" Value="{Binding VM_Rudder}" Minimum="-1" Maximum="1"/>
             </StackPanel>
         </StackPanel>
