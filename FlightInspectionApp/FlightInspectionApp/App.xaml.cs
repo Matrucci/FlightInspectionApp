@@ -17,7 +17,6 @@ namespace FlightInspectionApp
         public static void Main()
         {
             var application = new App();
-            MainWindow mw = new MainWindow();
             application.InitializeComponent();
             application.Run();
         }

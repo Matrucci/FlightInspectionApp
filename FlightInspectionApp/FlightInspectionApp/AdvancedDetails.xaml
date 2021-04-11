@@ -1,0 +1,23 @@
+﻿<Window x:Class="FlightInspectionApp.AdvancedDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        xmlns:oxy="clr-namespace:OxyPlot.Wpf;assembly=OxyPlot.Wpf" 
+        xmlns:FlightInspectionApp="clr-namespace:FlightInspectionApp"
+        
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlightInspectionApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Background="LightSteelBlue" Height="650" Width="1100">
+
+
+    <Grid Margin="0,0,0.333,-0.333" Background="LightSlateGray" Height="421" VerticalAlignment="Bottom">
+        <!-- The OxyPlot control is binding to a PlotModel in the MainViewModel -->
+        <oxy:PlotView Model="{Binding plotModel, UpdateSourceTrigger=PropertyChanged}" Background="AliceBlue" Margin="707,-170,42,299" />
+        <oxy:PlotView Model="{Binding plotModelTwo, UpdateSourceTrigger=PropertyChanged}" Background="AliceBlue" Margin="311,-170,423,299" />
+        <oxy:PlotView Model="{Binding plotModelThree, UpdateSourceTrigger=PropertyChanged}" Background="AliceBlue" Margin="311,127,42,0" />
+        <ListBox x:Name="l1" HorizontalAlignment="Right" Height="591" Margin="0,-170,807,0" Background="AliceBlue" VerticalAlignment="Top" Width="276" ItemsSource="{Binding vm_Colnames, UpdateSourceTrigger=PropertyChanged}" SelectionChanged="l1_SelectionChanged" SelectedItem="{Binding vm_SelectedItem, UpdateSourceTrigger=PropertyChanged}"/>
+
+    </Grid>
+</Window>

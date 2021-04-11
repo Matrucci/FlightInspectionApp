@@ -297,6 +297,7 @@ namespace FlightInspectionApp
             }
             else if (be.GetDescription() == "stop")
             {
+
                 this.model.Stop();
             }
             else if (be.GetDescription() == "forward")
@@ -367,6 +368,11 @@ namespace FlightInspectionApp
         public int GetCurrentLine()
         {
             return this.model.GetCurrentLine();
+        }
+
+        public void vm_setSelectedColumns()
+        {
+            throw new NotImplementedException();
         }
     }
 }

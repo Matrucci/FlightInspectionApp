@@ -22,3 +22,5 @@ H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspection
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\controls\HUD.baml
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\controls\PitchRoll.g.cs
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\controls\PitchRoll.baml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\controls\PitchRollWheel.g.cs
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\Debug\controls\PitchRollWheel.baml

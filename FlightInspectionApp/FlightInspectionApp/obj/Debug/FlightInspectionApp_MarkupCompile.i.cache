@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-6781900330
+8-1570611814
 
-181447354066
-141183416626
-App.xaml;controls\HUD.xaml;controls\Joystick.xaml;controls\PitchRoll.xaml;controls\Playback.xaml;MainWindow.xaml;
+23-625494587
+191466208501
+AdvancedDetails.xaml;App.xaml;controls\HUD.xaml;controls\Joystick.xaml;controls\PitchRoll.xaml;controls\PitchRollWheel.xaml;controls\Playback.xaml;MainWindow.xaml;
 
-True
+False
 

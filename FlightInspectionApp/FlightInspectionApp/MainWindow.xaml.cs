@@ -128,5 +128,11 @@ namespace FlightInspectionApp
         {
             this.vm.CsvButtonClick();
         }
+
+        private void details_btn_Click(object sender, RoutedEventArgs e)
+        {
+            AdvancedDetails ad = new AdvancedDetails(CSVPath, XMLPath);
+            ad.Show();
+        }
     }
 }

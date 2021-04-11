@@ -10,5 +10,6 @@ namespace FlightInspectionApp
     {
         int GetMinimumSliderValue();
         int GetMaximumSliderValue();
+        void vm_setSelectedColumns();
     }
 }
