@@ -34,7 +34,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-<<<<<<< HEAD
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x86\Debug\</OutputPath>
@@ -76,11 +75,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Printing" />
-=======
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
->>>>>>> origin/first-stepping-stone
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -95,7 +89,6 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="AdvancedDetails.xaml.cs">
       <DependentUpon>AdvancedDetails.xaml</DependentUpon>
     </Compile>
@@ -149,12 +142,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-=======
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
->>>>>>> origin/first-stepping-stone
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -163,13 +150,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="FlightGearClient.cs" />
     <Compile Include="controls\Playback.xaml.cs">
       <DependentUpon>Playback.xaml</DependentUpon>
     </Compile>
-=======
->>>>>>> origin/first-stepping-stone
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -192,13 +176,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-<<<<<<< HEAD
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
-=======
-    </EmbeddedResource>
->>>>>>> origin/first-stepping-stone
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -207,7 +187,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-<<<<<<< HEAD
   <ItemGroup>
     <Resource Include="Resources\013-play.png" />
   </ItemGroup>
@@ -229,7 +208,5 @@
   <ItemGroup>
     <Resource Include="Resources\040-backward.png" />
   </ItemGroup>
-=======
->>>>>>> origin/first-stepping-stone
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

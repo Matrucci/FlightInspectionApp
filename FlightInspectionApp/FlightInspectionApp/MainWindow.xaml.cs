@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -7,12 +6,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-=======
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
->>>>>>> origin/first-stepping-stone
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,16 +17,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/first-stepping-stone
 namespace FlightInspectionApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-<<<<<<< HEAD
     public partial class MainWindow : Window, IView, IObserver
     {
         private ViewModel vm;
@@ -144,13 +133,6 @@ namespace FlightInspectionApp
         {
             AdvancedDetails ad = new AdvancedDetails(CSVPath, XMLPath);
             ad.Show();
-=======
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
-            InitializeComponent();
->>>>>>> origin/first-stepping-stone
         }
     }
 }
