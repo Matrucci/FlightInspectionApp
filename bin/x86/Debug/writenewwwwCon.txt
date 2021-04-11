@@ -1,0 +1,4 @@
+the correlativeFeatureName is: engine_rpm
+the selectedFeature is: vertical-speed-indicator_indicated-speed-fpm
+minX is: -1956.482MinY is: 154.3279
+maxX is: 3365.829MaxY is: 4747.18

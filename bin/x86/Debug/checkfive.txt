@@ -1,0 +1,3 @@
+selectedFeatureName is: vertical-speed-indicator_indicated-speed-fpm
+newStr is: 
+3
