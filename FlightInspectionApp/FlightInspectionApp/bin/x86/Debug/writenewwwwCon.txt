@@ -1,4 +1,4 @@
-the correlativeFeatureName is: attitude-indicator_internal-roll-deg
-the selectedFeature is: attitude-indicator_indicated-roll-deg
-minX is: -37.43903MinY is: -28.56304
-maxX is: 40MaxY is: 24.07307
+the correlativeFeatureName is: gps_indicated-vertical-speed
+the selectedFeature is: vertical-speed-fps
+minX is: -36.35204MinY is: -2199.583
+maxX is: 15.8754MaxY is: 955.8688
