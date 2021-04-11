@@ -38,9 +38,13 @@ namespace FlightInspectionApp {
     /// <summary>
     /// App
     /// </summary>
+<<<<<<< HEAD
     public partial class App : System.Windows.Application, System.Windows.Markup.IComponentConnector {
         
         private bool _contentLoaded;
+=======
+    public partial class App : System.Windows.Application {
+>>>>>>> origin/first-stepping-stone
         
         /// <summary>
         /// InitializeComponent
@@ -54,6 +58,7 @@ namespace FlightInspectionApp {
             
             #line default
             #line hidden
+<<<<<<< HEAD
             if (_contentLoaded) {
                 return;
             }
@@ -75,6 +80,20 @@ namespace FlightInspectionApp {
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
             this._contentLoaded = true;
+=======
+        }
+        
+        /// <summary>
+        /// Application Entry Point.
+        /// </summary>
+        [System.STAThreadAttribute()]
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
+        public static void Main() {
+            FlightInspectionApp.App app = new FlightInspectionApp.App();
+            app.InitializeComponent();
+            app.Run();
+>>>>>>> origin/first-stepping-stone
         }
     }
 }

@@ -13,6 +13,7 @@ namespace FlightInspectionApp
     /// </summary>
     public partial class App : Application
     {
+<<<<<<< HEAD
         [STAThread]
         public static void Main()
         {
@@ -20,5 +21,7 @@ namespace FlightInspectionApp
             application.InitializeComponent();
             application.Run();
         }
+=======
+>>>>>>> origin/first-stepping-stone
     }
 }
