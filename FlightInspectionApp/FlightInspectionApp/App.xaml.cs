@@ -13,5 +13,15 @@ namespace FlightInspectionApp
     /// </summary>
     public partial class App : Application
     {
+<<<<<<< HEAD
+        [STAThread]
+        public static void Main()
+        {
+            var application = new App();
+            application.InitializeComponent();
+            application.Run();
+        }
+=======
+>>>>>>> origin/first-stepping-stone
     }
 }

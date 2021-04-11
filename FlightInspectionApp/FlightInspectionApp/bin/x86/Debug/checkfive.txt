@@ -1,0 +1,3 @@
+selectedFeatureName is: altimeter_indicated-altitude-ft
+newStr is: 
+3

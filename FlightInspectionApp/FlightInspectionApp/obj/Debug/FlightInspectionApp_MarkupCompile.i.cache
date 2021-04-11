@@ -9,6 +9,16 @@ FlightInspectionApp
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
+
+8-1570611814
+
+23-625494587
+191466208501
+AdvancedDetails.xaml;App.xaml;controls\HUD.xaml;controls\Joystick.xaml;controls\PitchRoll.xaml;controls\PitchRollWheel.xaml;controls\Playback.xaml;MainWindow.xaml;
+
+False
+=======
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\App.xaml
 11151548125
 
@@ -17,4 +27,5 @@ H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspection
 MainWindow.xaml;
 
 True
+>>>>>>> origin/first-stepping-stone
 

@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlightInspectionApp"
         mc:Ignorable="d"
+<<<<<<< HEAD
+        xmlns:Controls="clr-namespace:FlightInspectionApp.controls"
+        Title="Main App" Height="750" Width="1500">
+
+    <Grid Background="Black">
+        <StackPanel Orientation="Vertical">
+            <Controls:playback Visibility="Hidden" x:Name="playback_controls"/>
+            <StackPanel Orientation="Vertical" Name="controllers" Visibility="Hidden">
+                <StackPanel Orientation="Horizontal">
+                    <Slider Name="slider_throttle" Height="340" HorizontalAlignment="Left" Margin="10, 10, 10, 10" Orientation="Vertical" Value="{Binding VM_Throttle}" Minimum="0" Maximum="1"/>
+                    <Controls:Joystick x:Name="joystick" HorizontalAlignment="Left" Margin="10, 10, 10, 10"/>
+                    <Controls:HUD Margin="30,0,0,0" Width="350" Height="350"/>
+                    <Controls:PitchRoll Margin="10,0,0,0"/>
+                </StackPanel>
+                <Slider Name="slider_rudder" Width="340" HorizontalAlignment="Left" Margin="45, 10, 10, 10" Value="{Binding VM_Rudder}" Minimum="-1" Maximum="1"/>
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="details_btn" Width="100" Height="50" Content="Advanced details" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="30, 0, 0, 30" Click="details_btn_Click"/>
+        <Button x:Name="upload_xml_btn" Content="Upload XML File" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,150,30" Width="100" Height="40" Click="Upload_xml_btn_Click"/>
+        <Button x:Name="upload_csv_btn" Content="Upload CSV File" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,25,30" Width="100" Height="40" Click="Upload_csv_btn_Click"/>
+=======
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         
+>>>>>>> origin/first-stepping-stone
     </Grid>
 </Window>
