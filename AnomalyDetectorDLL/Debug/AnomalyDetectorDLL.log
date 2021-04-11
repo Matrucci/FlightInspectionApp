@@ -1,0 +1,17 @@
+﻿  pch.cpp
+  anomaly_detection_util.cpp
+  API.cpp
+C:\peleg\MitkademTwo\connection\AnomalyDetectorDLL\commands.h(182,17): warning C4244: 'argument': conversion from 'const long' to 'float', possible loss of data
+  CLI.cpp
+C:\peleg\MitkademTwo\connection\AnomalyDetectorDLL\commands.h(182,17): warning C4244: 'argument': conversion from 'const long' to 'float', possible loss of data
+  dllmain.cpp
+  HybridAnomalyDetector.cpp
+  minCircle.cpp
+  SimpleAnomalyDetector.cpp
+  timeseries.cpp
+  Generating Code...
+  .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+  anomaly_detection_util.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  anomaly_detection_util.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+     Creating library C:\peleg\MitkademTwo\connection\AnomalyDetectorDLL\Debug\AnomalyDetectorDLL.lib and object C:\peleg\MitkademTwo\connection\AnomalyDetectorDLL\Debug\AnomalyDetectorDLL.exp
+  AnomalyDetectorDLL.vcxproj -> C:\peleg\MitkademTwo\connection\AnomalyDetectorDLL\Debug\AnomalyDetectorDLL.dll
