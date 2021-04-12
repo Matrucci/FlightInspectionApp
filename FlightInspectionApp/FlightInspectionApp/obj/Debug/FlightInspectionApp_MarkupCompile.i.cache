@@ -9,12 +9,12 @@ FlightInspectionApp
 none
 false
 DEBUG;TRACE
-H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\App.xaml
-11151548125
 
-6833754228
-13-1505183044
-MainWindow.xaml;
+8-1570611814
 
-True
+23-625494587
+191466208501
+AdvancedDetails.xaml;App.xaml;controls\HUD.xaml;controls\Joystick.xaml;controls\PitchRoll.xaml;controls\PitchRollWheel.xaml;controls\Playback.xaml;MainWindow.xaml;
+
+False
 

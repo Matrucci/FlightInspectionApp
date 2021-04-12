@@ -1,0 +1,3 @@
+selectedFeatureName is: vertical-speed-fps
+newStr is: 
+3
