@@ -31,7 +31,9 @@ DISCLAIMER:  THIS USER CONTROL WAS GIVEN TO US BY OUR INSTRUCTORS AND WAS NOT CR
 ## Playback:
 The playback controls uses data binding in order to change the slider as the flight goes on and also lets the user change the flight timing.
 Quick explanation about the buttons:
+
 ![playback](https://i.imgur.com/UiIB0E1.png)
+
 We'll go over from left to right:
 Back - Brings the flight all the way back to the start.
 Rewind - Brings the flight back 5 seconds.
@@ -45,18 +47,24 @@ Slider - Let's the user jump back and forwards as he wishes.
 
 ## PitchRoll:
 This user control represents the pitch of the plane and the roll.
+
 ![PitchRoll](https://i.imgur.com/cZihUAm.png)
+
 The pitch is the angle of the plane's nose to the x axis (in this representation, the nose is on the left).
 The roll represents the tilt of the plane.
 
 ## HUD:
 This user control shows useful data about the current conditions of the flight.
+
 ![HUD](https://i.imgur.com/dIqzyo6.png)
+
 Yaw: The direction of the plane (in degrees).
 Altimeter: The height of the plane above sea level (in feet).
 Air Speed: The speed of the air outside the plane (in kt).
 
 ## Joystick:
 This user control shows the elevation and aileron of the plane in joystick form.
+
 ![Joystick](https://i.imgur.com/svSZ7Xn.png)
+
 THIS USER CONTROL WAS GIVEN TO US BY OUR INSTRUCTORS.
