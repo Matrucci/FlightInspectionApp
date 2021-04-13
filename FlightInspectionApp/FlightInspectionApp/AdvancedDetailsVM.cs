@@ -23,12 +23,17 @@ namespace FlightInspectionApp
         public ScatterSeries lineSeries3Scatter = new ScatterSeries();
 
         private AdvancedDetailsModel user;
-        volatile Boolean stop;
+        public Boolean stop;
+        Thread t;
+
+        public bool rewind;
+        public static Mutex mutex = new Mutex();
 
         public AdvancedDetailsVM()
         {
             user = new AdvancedDetailsModel("anomaly_flight.csv", "playback_small.xml");
             stop = false;
+            rewind = false;
 
             // Create the plot model
             plotModel = new PlotModel();
@@ -198,7 +203,7 @@ namespace FlightInspectionApp
 
         public void vm_setSelectedColumns()
         {
-            new Thread(() =>
+            this.t = new Thread(() =>
             {
                 lineSeries1.Points.Clear();
                 lineSeries2.Points.Clear();
@@ -227,49 +232,85 @@ namespace FlightInspectionApp
                 plotModelThree.InvalidatePlot(true);
 
 
-                new Thread(delegate ()
+                //new Thread(delegate ()
+                //{
+                while (!stop)
                 {
-                    while (!stop)
+                    lineSeries1.Points.Add(new DataPoint(vm_TimeAxis.ElementAt(iteration), vm_SelectedColumnAxis.ElementAt(iteration)));
+                    lineSeries2.Points.Add(new DataPoint(vm_TimeAxis.ElementAt(iteration), vm_CorrelativeColumnAxis.ElementAt(iteration)));
+
+                    if (iteration % 10 == 0)
                     {
-                        lineSeries1.Points.Add(new DataPoint(vm_TimeAxis.ElementAt(iteration), vm_SelectedColumnAxis.ElementAt(iteration)));
-                        lineSeries2.Points.Add(new DataPoint(vm_TimeAxis.ElementAt(iteration), vm_CorrelativeColumnAxis.ElementAt(iteration)));
-
-                        if (iteration % 10 == 0)
+                        if (iteration > 300)
                         {
-                            if (iteration > 300)
-                            {
-                                lineSeries3Scatter.Points.RemoveAt(0);
-                            }
-                            lineSeries3Scatter.Points.Add(new ScatterPoint(vm_SelectedColumnAxis.ElementAt(iteration), vm_CorrelativeColumnAxis.ElementAt(iteration), 3));
-
+                            lineSeries3Scatter.Points.RemoveAt(0);
                         }
+                        lineSeries3Scatter.Points.Add(new ScatterPoint(vm_SelectedColumnAxis.ElementAt(iteration), vm_CorrelativeColumnAxis.ElementAt(iteration), 3));
 
-
-                        plotModel.InvalidatePlot(true);
-                        plotModelTwo.InvalidatePlot(true);
-                        plotModelThree.InvalidatePlot(true);
-                        OnPropertyChange("plotModel");
-                        OnPropertyChange("plotModelTwo");
-                        OnPropertyChange("plotModelThree");
-                        if (iteration == sizeOfIteration)
-                        {
-                            stop = true;
-                            /////////////////////////////////
-                            //plotModel.Title = "";
-                            //plotModelTwo.Title = "";
-                            /////////////////////////////////
-                        }
-                        else
-                        {
-                            iteration++;
-                            //read the data of the values of the points in 4Hz
-                            Thread.Sleep(2);
-                        }
                     }
-                }).Start();
+
+                    /**
+                    if (stop = true && iteration >= 50)
+                    {
+                        Console.WriteLine("YDB");
+                        lineSeries1.Points.RemoveRange(iteration - 50, 50);
+                        lineSeries2.Points.RemoveRange(iteration - 50, 50);
+                        lineSeries3Scatter.Points.RemoveRange(iteration - 50, 50);
+                        iteration = iteration - 1;
+                        mutex.WaitOne();
+                        this.rewind = false;
+                        mutex.ReleaseMutex();
+                    }
+                    **/
+                    
+
+                    plotModel.InvalidatePlot(true);
+                    plotModelTwo.InvalidatePlot(true);
+                    plotModelThree.InvalidatePlot(true);
+                    OnPropertyChange("plotModel");
+                    OnPropertyChange("plotModelTwo");
+                    OnPropertyChange("plotModelThree");
+                    if (iteration == sizeOfIteration)
+                    {
+                        stop = true;
+                        /////////////////////////////////
+                        //plotModel.Title = "";
+                        //plotModelTwo.Title = "";
+                        /////////////////////////////////
+                    }
+                    else
+                    {
+                        iteration++;
+                        //read the data of the values of the points in 4Hz
+                        Thread.Sleep(2);
+                    }
+                }
+                //this.stop = false;
+                //}).Start();
             }
-            ).Start();
+            );
+            this.t.Start();
+
             
+        }
+
+        public void Start()
+        {
+            this.stop = false;
+            //this.t.Abort();
+        }
+
+        public void Stop()
+        {
+           this.stop = true;
+           this.t.Abort();
+        }
+
+        public void Rewind()
+        {
+            mutex.WaitOne();
+            this.rewind = true;
+            mutex.ReleaseMutex();
         }
 
         public int GetMinimumSliderValue()
