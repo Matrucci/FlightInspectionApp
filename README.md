@@ -30,7 +30,7 @@ We created multiple Views (MainWindow and Advanced Details), each of them having
 We also created multiple UserControls (HUD, Playback, PitchRoll, etc) that can be implemented in future projects independently.
 Please note, that the Joystick UserControl was created by our course staff over at BIU and was not created by us. Full credit for this specific UserControl goes to them.
 
-ADD UML HERE.
+![UML](https://i.imgur.com/FNQjCmi.png)
 
 ## Running this project on a brand new machine:
 
