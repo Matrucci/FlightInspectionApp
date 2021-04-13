@@ -32,6 +32,8 @@ Please note, that the Joystick UserControl was created by our course staff over 
 
 ![UML](https://i.imgur.com/FNQjCmi.png)
 
+[Classes Description](FlightInspectionApp/ClassDetails.md)
+
 ## Running this project on a brand new machine:
 
 - First you will need to install Visual Studio.
