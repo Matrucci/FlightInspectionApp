@@ -1,4 +1,4 @@
-the correlativeFeatureName is: gps_indicated-vertical-speed
-the selectedFeature is: vertical-speed-fps
-minX is: -36.35204MinY is: -2199.583
-maxX is: 15.8754MaxY is: 955.8688
+the correlativeFeatureName is: airspeed-indicator_indicated-speed-kt
+the selectedFeature is: altitude-ft
+minX is: -9999MinY is: -27.31235
+maxX is: 850.5734MaxY is: 62.55731
