@@ -37,10 +37,16 @@ namespace FlightInspectionApp
         }
         private void l1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (this.vm.threadIsRunning)
+            {
+                this.vm.Stop();
+            }
+            this.vm.stop = true;
+            this.vm.iteration = 0;
             this.vm.Start();
             // Get the currently selected item in the ListBox.
             string selectedItem = l1.SelectedItem.ToString();
-            MessageBox.Show(selectedItem);
+            //MessageBox.Show(selectedItem);
             this.vm.vm_setSelectedColumns();
         }
 

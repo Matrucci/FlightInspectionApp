@@ -171,11 +171,11 @@ namespace FlightInspectionApp
         {
             get 
             {
-                this.advm.Rewind(this.model.GetCurrentLine());
                 return this.model.GetCurrentLine(); 
             }
             set
             {
+                //this.advm.Rewind(value);
                 this.model.SetCurrentLine(value);
             }
         }
@@ -254,6 +254,10 @@ namespace FlightInspectionApp
             {
                 this.PropertyChanged(this, new PropertyChangedEventArgs("VM_Altimeter_Top"));
                 this.PropertyChanged(this, new PropertyChangedEventArgs("VM_Altimeter_Bot"));
+            }
+            else if (e.PropertyName.Equals("LineNumber"))
+            {
+                //this.advm.Rewind(this.model.GetCurrentLine());
             }
             this.PropertyChanged(this, new PropertyChangedEventArgs("VM_" + e.PropertyName));
         }
