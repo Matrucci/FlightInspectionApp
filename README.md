@@ -22,7 +22,7 @@ https://www.flightgear.org/download/
 
 - After installation, head over to the Settings tab and in "Additional Settings" put the following lines and then press Fly!:
 
-INPUT COMMAND HERE
+![Settings](https://i.imgur.com/w5dsLgd.png)
 
 ## Project structure:
 
