@@ -15,6 +15,7 @@ This class is the model and it handles the back end of the application. From sen
 
 ## AdvancedDetails:
 This class is the front end of the graphs and the advanced details about the flight. It also marks anomalies in the graph.
+These graphs are updated according to the clicks on the "slider" so that if you press the stop or run button (that on the slider), the graph display is updated accordingly.
 
 ## AdvancedDetailsVM:
 The ViewModel of the advanced details part. Communicates with the model and the view in order to transfer data between them independently.
