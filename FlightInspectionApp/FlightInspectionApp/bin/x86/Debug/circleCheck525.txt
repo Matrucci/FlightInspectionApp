@@ -23,7 +23,7 @@ newwwww525
 c.cx=425.286682 , c.cy=45.715046 , c.threshold=470.510315
 newwwww525
 +++++++gps_indicated-ground-speed-kt,slip-skid-ball_indicated-slip-skid+++++++
-c.cx=46.783325 , c.cy=0.446847 , c.threshold=51.464191
+c.cx=46.784332 , c.cy=0.433488 , c.threshold=51.465157
 newwwww525
 +++++++gps_indicated-vertical-speed,vertical-speed-indicator_indicated-speed-fpm+++++++
 c.cx=-1081.242676 , c.cy=705.273071 , c.threshold=3159.057129
@@ -35,5 +35,5 @@ newwwww525
 c.cx=179.976349 , c.cy=0.125662 , c.threshold=197.974045
 newwwww525
 +++++++vertical-speed-indicator_indicated-speed-fpm,engine_rpm+++++++
-c.cx=-nan(ind) , c.cy=-nan(ind) , c.threshold=-nan(ind)
+c.cx=704.673462 , c.cy=462.934723 , c.threshold=2971.233643
 newwwww525

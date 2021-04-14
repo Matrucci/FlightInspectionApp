@@ -4,7 +4,7 @@
 winexe
 C#
 .cs
-C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\
 FlightInspectionApp
 none
 false
@@ -13,7 +13,7 @@ DEBUG;TRACE
 8-1570611814
 
 22996229238
-221048358414
+221627269378
 AdvancedDetails.xaml;App.xaml;controls\HUD.xaml;controls\Joystick.xaml;controls\PitchRoll.xaml;controls\PitchRollWheel.xaml;controls\Playback.xaml;MainWindow.xaml;
 
 False

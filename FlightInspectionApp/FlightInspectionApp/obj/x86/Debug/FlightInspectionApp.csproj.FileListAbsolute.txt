@@ -108,3 +108,40 @@ C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionAp
 C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\AnomalyDetectorCircleDLL.dll
 C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\AnomalyDetectorCircleDLL.pdb
 C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csprojAssemblyReference.cache
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.exe.config
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.exe
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.pdb
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.dll
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.WindowsForms.dll
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.Wpf.dll
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\AnomalyDetectorCircleDLL.pdb
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\AnomalyDetectorLineDLL.pdb
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.xml
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.WindowsForms.xml
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.Wpf.xml
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csprojAssemblyReference.cache
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\AdvancedDetails.g.cs
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\App.g.cs
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\HUD.g.cs
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Joystick.g.cs
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRoll.g.cs
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRollWheel.g.cs
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Playback.g.cs
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\MainWindow.g.cs
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp_MarkupCompile.cache
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp_MarkupCompile.lref
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\AdvancedDetails.baml
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\App.baml
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\HUD.baml
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Joystick.baml
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRoll.baml
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRollWheel.baml
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Playback.baml
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\MainWindow.baml
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.g.resources
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.Properties.Resources.resources
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csproj.GenerateResource.cache
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csproj.CopyComplete
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.exe
+C:\Users\idang\OneDrive\שולחן העבודה\testFG\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.pdb
