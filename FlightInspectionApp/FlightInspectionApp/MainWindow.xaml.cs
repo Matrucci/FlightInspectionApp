@@ -117,7 +117,7 @@ namespace FlightInspectionApp
             else if (Regex.Match(e.PropertyName, @"(.{3})\s*$").ToString().Equals("dll"))
             {
                 this.details_btn.Visibility = Visibility.Visible;
-                upload_dll.Visibility = Visibility.Hidden;
+                upload_dll.Visibility = Visibility.Visible;
                 this.dllPath = e.PropertyName.ToString();
             }
             /*else if (e.PropertyName.Equals("VM_Elevator"))

@@ -63,5 +63,10 @@ namespace FlightInspectionApp
 
             //this.vm.Rewind();
         }
+
+        private void upload_dll_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -18,6 +18,8 @@
         <oxy:PlotView Model="{Binding plotModelThree, UpdateSourceTrigger=PropertyChanged}" Background="AliceBlue" Margin="465,127,200.333,-3" RenderTransformOrigin="0.271,0.482" />
         <ListBox x:Name="l1" HorizontalAlignment="Right" Height="591" Margin="0,-170,807,0" Background="AliceBlue" VerticalAlignment="Top" Width="276" ItemsSource="{Binding vm_Colnames, UpdateSourceTrigger=PropertyChanged}" SelectionChanged="l1_SelectionChanged" SelectedItem="{Binding vm_SelectedItem, UpdateSourceTrigger=PropertyChanged}"/>
         <!--
+        <Button x:Name="upload_dll" Content="Upload your DLL" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 10, 10" Width="150" Height="40" Click="upload_dll_Click"/>
+        
         <Button Content="Stop" Width="100" Height="40" Name="stop_btn" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="stop_btn_Click"/>
         <Button Content="Rewing" Width="100" Height="40" Name="rewind_btn" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="rewind_btn_Click" Margin="150,0,0,0"/>
         -->
