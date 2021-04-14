@@ -28,11 +28,11 @@ namespace FlightInspectionApp
             this.DataContext = vm;
         }
 
-        public AdvancedDetails(string xml, string csv, FlightGearClient fg)
+        public AdvancedDetails(string xml, string csv, FlightGearClient fg, string dllPath)
         {
             InitializeComponent();
             this.InitializeComponent();
-            this.vm = new AdvancedDetailsVM(csv, xml, fg);
+            this.vm = new AdvancedDetailsVM(csv, xml, fg, dllPath);
             this.DataContext = vm;
         }
         private void l1_SelectionChanged(object sender, SelectionChangedEventArgs e)

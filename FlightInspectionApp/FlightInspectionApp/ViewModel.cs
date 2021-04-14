@@ -368,6 +368,19 @@ namespace FlightInspectionApp
             }
         }
 
+        public void PressDLL()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "dll files (*.dll)|*.dll";
+            openFileDialog.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(openFileDialog.FileName));
+            }
+        }
+
 
         //Getting an XML from the user
         public void XmlButtonClick()

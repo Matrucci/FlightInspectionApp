@@ -214,7 +214,7 @@ namespace FlightInspectionApp
             return MaxY;
         }
 
-        public Connection()
+        public Connection(string dllPath)
         {
             
             dllFile = @"H:\Advanced Programming\FlightInspectionApp\Plugin\AnomalyDetectorCircleDLL\Debug\CSdll.dll";
