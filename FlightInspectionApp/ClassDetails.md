@@ -35,14 +35,23 @@ Quick explanation about the buttons:
 ![playback](https://i.imgur.com/UiIB0E1.png)
 
 We'll go over from left to right:
+
 Back - Brings the flight all the way back to the start.
+
 Rewind - Brings the flight back 5 seconds.
+
 Pause - Pauses the flight.
+
 Play - Continue playing from the same spot (if paused or stopped).
+
 Stop - Pauses the flight but also sets it all the way back to the start.
+
 Forward - Sets the flight 5 seconds ahead.
+
 Skip - Sets the flight all the way to the very end.
+
 Play Speed - Let's the decide which speed he wants to watch the flight in (Inspired by the YouTube player).
+
 Slider - Let's the user jump back and forwards as he wishes.
 
 ## PitchRoll:
