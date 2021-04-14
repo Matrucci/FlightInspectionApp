@@ -23,28 +23,28 @@ namespace FlightInspectionApp
 
         ////////////////////////////////////////////
 
-        [DllImport("AnomalyDetectorDLL.dll")]
+        [DllImport("AnomalyDetectorDLL.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void getNumberCheck();
 
-        [DllImport("AnomalyDetectorDLL.dll")]
+        [DllImport("AnomalyDetectorDLL.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void getCorrelativeFeatureNameNew(string CSVfileName, string selectedFeatureName);
 
         //////////////////////////////////////////////
 
 
-        [DllImport("AnomalyDetectorDLL.dll")]
+        [DllImport("AnomalyDetectorDLL.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern IntPtr getCorrelativeFeatureData(string CSVfileName, string selectedFeatureName, float MinX, float MaxX);
 
-        [DllImport("AnomalyDetectorDLL.dll")]
+        [DllImport("AnomalyDetectorDLL.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern int correlativeStrLen(IntPtr str);
 
-        [DllImport("AnomalyDetectorDLL.dll")]
+        [DllImport("AnomalyDetectorDLL.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern char getCharByIndex(IntPtr str, int x);
 
 
-        [DllImport("AnomalyDetectorDLL.dll")]
+        [DllImport("AnomalyDetectorDLL.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern float getMinY(IntPtr str);
-        [DllImport("AnomalyDetectorDLL.dll")]
+        [DllImport("AnomalyDetectorDLL.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern float getMaxY(IntPtr str);
 
 

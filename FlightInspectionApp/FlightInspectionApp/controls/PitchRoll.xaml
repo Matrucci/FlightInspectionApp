@@ -12,7 +12,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <!--Pitch-->
-        <TextBlock Text="Pitch" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="15"/>
+        <TextBlock Text="Pitch:" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="15"/>
+        <TextBlock Text="{Binding VM_Pitch}" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="15" Margin="50,0,0,0"/>
         <Line Grid.Row="0" Stroke="Blue" X1="20" Y1="87" X2="330" Y2="87" StrokeThickness="4"/>
         <Path Stroke="White" StrokeThickness="2">
             <Path.Data>
@@ -39,7 +40,8 @@
         
         
         <!--Roll-->
-        <TextBlock Text="Roll" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="15" Grid.Row="1"/>
+        <TextBlock Text="Roll:" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="15" Grid.Row="1"/>
+        <TextBlock Text="{Binding VM_Roll}" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="15" Margin="50,0,0,0" Grid.Row="1"/>
         <Line Grid.Row="1" Stroke="Blue" X1="175" Y1="20" X2="175" Y2="155" StrokeThickness="4"/>
         <Line Grid.Row="1" Stroke="Red" X1="90" Y1="87" X2="260" Y2="87" StrokeThickness="4">
             <Line.RenderTransform>

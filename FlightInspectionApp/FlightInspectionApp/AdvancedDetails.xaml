@@ -18,6 +18,7 @@
         <oxy:PlotView Model="{Binding plotModelTwo, UpdateSourceTrigger=PropertyChanged}" Background="AliceBlue" Margin="311,-170,423,299" />
         <oxy:PlotView Model="{Binding plotModelThree, UpdateSourceTrigger=PropertyChanged}" Background="AliceBlue" Margin="311,127,42,0" />
         <ListBox x:Name="l1" HorizontalAlignment="Right" Height="591" Margin="0,-170,807,0" Background="AliceBlue" VerticalAlignment="Top" Width="276" ItemsSource="{Binding vm_Colnames, UpdateSourceTrigger=PropertyChanged}" SelectionChanged="l1_SelectionChanged" SelectedItem="{Binding vm_SelectedItem, UpdateSourceTrigger=PropertyChanged}"/>
-
+        <Button Content="Stop" Width="100" Height="40" Name="stop_btn" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="stop_btn_Click"/>
+        <Button Content="Rewing" Width="100" Height="40" Name="rewind_btn" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="rewind_btn_Click" Margin="150,0,0,0"/>
     </Grid>
 </Window>

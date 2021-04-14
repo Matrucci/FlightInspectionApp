@@ -19,7 +19,7 @@ namespace FlightInspectionApp
     /// </summary>
     public partial class AdvancedDetails : Window
     {
-        private IViewModel vm;
+        private AdvancedDetailsVM vm;
         public AdvancedDetails()
         {
             InitializeComponent();
@@ -37,10 +37,22 @@ namespace FlightInspectionApp
         }
         private void l1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            this.vm.Start();
             // Get the currently selected item in the ListBox.
             string selectedItem = l1.SelectedItem.ToString();
             MessageBox.Show(selectedItem);
             this.vm.vm_setSelectedColumns();
+        }
+
+        private void stop_btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.vm.Stop();
+        }
+
+        private void rewind_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+            this.vm.Rewind();
         }
     }
 }
