@@ -22,7 +22,7 @@ https://www.flightgear.org/download/
 
 - After installation, head over to the Settings tab and in "Additional Settings" put the following lines and then press Fly!:
 
-![Settings](https://i.imgur.com/ElTtcKD.png)
+INPUT COMMAND HERE
 
 ## Project structure:
 
@@ -35,6 +35,18 @@ Please note, that the Joystick UserControl was created by our course staff over 
 
 [Classes Description](FlightInspectionApp/ClassDetails.md)
 
+
+## DLL:
+Throughout the project we used dll files several times:
+AnomalyDetectorDLL.dll, AnomalyDetectorLineDLL.dll , AnomalyDetectorCircleDLL.dll , CSdll.dll
+
+We used AnomalyDetectorDLL.dll to find the correlative fields and the regression line, which we saved on the mapCSV map, and this helped us to build the graphs of user stories 6, 7 and 8. We used AnomalyDetectorCircleDLL.dll and AnomalyDetectorLineDLL.dll that help us to show different kind of researchers that the anomaly detection algorithm find them so that the user can load a first dynamic algorithm that detects an anomaly using a line regration, investigate the flight with it and then load another algorithm that detects anomalies by circle.
+Note that the CSdll.dll file is written in c# (compared to the other dll files that written in c++), it is loaded dynamically by the user, which allows great flexibility and thus the user can connect any algorithm he wants.
+CSdll.dll should only call the "getAnomaly" method that it's arguments are:
+string CSVLearnFileName, string CSVTestFileName, string txtFileName, and returns nothing (void), so it's signiture is: 
+public static extern void getAnomaly(string CSVLearnFileName, string CSVTestFileName, string txtFileName)
+The user who prepares the CSdll.dll file should make sure that in the first line he writes the shape with which he wanted to study the flight (regression line, circle etc.) A line below he will write for each pair of correlative fetures: the name of the properties, a line below will write the indexes of the regration in their set of values, and in the line below he will write the x points (and below the y points) that creates the shape in which he investigated the anomalies.
+
 ## Running this project on a brand new machine:
 
 - First you will need to install Visual Studio.
@@ -45,7 +57,7 @@ Please note, that the Joystick UserControl was created by our course staff over 
 
 ### Running
 
-- To run the application press start in Visual Studio in order to run.
+- To run the application press ctrl+F5 in order to run without debugging.
 - Run the FlightGear application with the configurations above.
 - Upload your xml file that describes the flight's values (you can build your own but we have provided a file for example that would work).
 - Upload your csv file with the flight's values (again, you can provide your own but one is provided inside the project's folder).
