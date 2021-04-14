@@ -1,3 +1,3 @@
-selectedFeatureName is: side-slip-deg
+selectedFeatureName is: airspeed-indicator_indicated-speed-kt
 newStr is: 
 3
