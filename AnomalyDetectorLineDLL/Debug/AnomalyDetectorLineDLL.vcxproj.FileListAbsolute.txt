@@ -1,0 +1,3 @@
+C:\peleg\MitkademTwo\AnomalyDetectorLineDLL\Debug\AnomalyDetectorLineDLL.dll
+C:\peleg\MitkademTwo\AnomalyDetectorLineDLL\Debug\AnomalyDetectorLineDLL.pdb
+C:\peleg\MitkademTwo\AnomalyDetectorLineDLL\Debug\AnomalyDetectorLineDLL.vcxprojAssemblyReference.cache
