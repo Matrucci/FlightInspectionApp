@@ -1,0 +1,2 @@
+C:\peleg\MitkademTwo\connection\AnomalyDetectorDLL\Debug\AnomalyDetectorDLL.dll
+C:\peleg\MitkademTwo\connection\AnomalyDetectorDLL\Debug\AnomalyDetectorDLL.pdb

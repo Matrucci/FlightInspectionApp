@@ -1,0 +1,3 @@
+selectedFeatureName is: altimeter_pressure-alt-ft
+newStr is: 
+3

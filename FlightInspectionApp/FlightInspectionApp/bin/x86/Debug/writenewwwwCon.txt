@@ -1,0 +1,4 @@
+the correlativeFeatureName is: attitude-indicator_internal-roll-deg
+the selectedFeature is: roll-deg
+minX is: -37.43997MinY is: -37.44216
+maxX is: 19.55825MaxY is: 19.55006

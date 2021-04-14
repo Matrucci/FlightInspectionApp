@@ -1,0 +1,3 @@
+selectedFeatureName is: roll-deg
+newStr is: 
+3

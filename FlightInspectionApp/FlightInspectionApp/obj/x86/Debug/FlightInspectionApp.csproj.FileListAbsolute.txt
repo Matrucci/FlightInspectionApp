@@ -1,0 +1,110 @@
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\AdvancedDetails.g.cs
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\App.g.cs
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\HUD.g.cs
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Joystick.g.cs
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRoll.g.cs
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRollWheel.g.cs
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Playback.g.cs
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\MainWindow.g.cs
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp_MarkupCompile.cache
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp_MarkupCompile.lref
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.exe.config
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.exe
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.pdb
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.dll
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.WindowsForms.dll
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.Wpf.dll
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.xml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.WindowsForms.xml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.Wpf.xml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\AdvancedDetails.baml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\App.baml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\HUD.baml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Joystick.baml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRoll.baml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRollWheel.baml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Playback.baml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\MainWindow.baml
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.g.resources
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.Properties.Resources.resources
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csproj.GenerateResource.cache
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csproj.CopyComplete
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.exe
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.pdb
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csprojAssemblyReference.cache
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.exe.config
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.exe
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.pdb
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.dll
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.WindowsForms.dll
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.Wpf.dll
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.xml
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.WindowsForms.xml
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.Wpf.xml
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csprojAssemblyReference.cache
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\AdvancedDetails.g.cs
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\App.g.cs
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\HUD.g.cs
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Joystick.g.cs
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRoll.g.cs
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRollWheel.g.cs
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Playback.g.cs
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp_MarkupCompile.cache
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp_MarkupCompile.lref
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\AdvancedDetails.baml
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\App.baml
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\HUD.baml
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Joystick.baml
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRoll.baml
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRollWheel.baml
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Playback.baml
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\MainWindow.baml
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.g.resources
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.Properties.Resources.resources
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csproj.GenerateResource.cache
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csproj.CopyComplete
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.exe
+C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.pdb
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.exe.config
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.exe
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.pdb
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.dll
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.WindowsForms.dll
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.Wpf.dll
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.xml
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.WindowsForms.xml
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\OxyPlot.Wpf.xml
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\AdvancedDetails.g.cs
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\App.g.cs
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\HUD.g.cs
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Joystick.g.cs
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRoll.g.cs
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRollWheel.g.cs
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Playback.g.cs
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\MainWindow.g.cs
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp_MarkupCompile.cache
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp_MarkupCompile.lref
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\AdvancedDetails.baml
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\App.baml
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\HUD.baml
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Joystick.baml
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRoll.baml
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\PitchRollWheel.baml
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\controls\Playback.baml
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\MainWindow.baml
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.g.resources
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.Properties.Resources.resources
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csproj.GenerateResource.cache
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csproj.CoreCompileInputs.cache
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csproj.CopyComplete
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.exe
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.pdb
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\AnomalyDetectorLineDLL.dll
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\AnomalyDetectorLineDLL.pdb
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\AnomalyDetectorCircleDLL.dll
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\AnomalyDetectorCircleDLL.pdb
+C:\peleg\MitkademTwo\FlightInspectionApp-first-stepping-stone\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csprojAssemblyReference.cache
