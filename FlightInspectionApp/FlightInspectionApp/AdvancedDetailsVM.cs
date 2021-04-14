@@ -38,7 +38,7 @@ namespace FlightInspectionApp
 
         public AdvancedDetailsVM()
         {
-            user = new AdvancedDetailsModel("anomaly_flight.csv", "playback_small.xml");
+            user = new AdvancedDetailsModel("anomaly_flight.csv", "playback_small.xml", "");
             stop = false;
             rewind = false;
             threadIsRunning = false;
@@ -95,9 +95,9 @@ namespace FlightInspectionApp
             plotModelThree.Series.Add(lineSeries3AnomalyPoints);
         }
 
-        public AdvancedDetailsVM(string xml, string csv, FlightGearClient fg)
+        public AdvancedDetailsVM(string xml, string csv, FlightGearClient fg, string dllPath)
         {
-            user = new AdvancedDetailsModel(csv, xml);
+            user = new AdvancedDetailsModel(csv, xml, dllPath);
             stop = false;
             rewind = false;
             this.fgc = fg;

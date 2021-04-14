@@ -52,7 +52,7 @@ namespace FlightInspectionApp
         private string SelectedItem { get; set; }
         private string correlativeFeature { get; set; }
 
-        public AdvancedDetailsModel(string csvPath, string xmlPath)
+        public AdvancedDetailsModel(string csvPath, string xmlPath, string dllPath)
         {
             this.Colnames = new List<string>();
             this.SelectedColumnAxis = new List<float>();
@@ -72,7 +72,7 @@ namespace FlightInspectionApp
             setColnamesFromXml(xmlPath);
             //create a map and a new CSV file with the headers
             setMap(csvPath);
-            ctd = new Connection();
+            ctd = new Connection(dllPath);
             //ctd.setSelectedName(SelectedItem);
             setAnomalyMap();
         }
