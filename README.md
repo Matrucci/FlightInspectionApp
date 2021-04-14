@@ -44,7 +44,7 @@ Please note, that the Joystick UserControl was created by our course staff over 
 
 ### Running
 
-- To run the application press start in Visual Studio in order to run without debugging.
+- To run the application press start in Visual Studio in order to run.
 - Run the FlightGear application with the configurations above.
 - Upload your xml file that describes the flight's values (you can build your own but we have provided a file for example that would work).
 - Upload your csv file with the flight's values (again, you can provide your own but one is provided inside the project's folder).
