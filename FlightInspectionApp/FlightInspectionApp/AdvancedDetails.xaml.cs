@@ -35,6 +35,10 @@ namespace FlightInspectionApp
             this.vm = new AdvancedDetailsVM(csv, xml, fg, dllPath);
             this.DataContext = vm;
         }
+        
+        /**
+        * l1_SelectionChanged - on click command set the selected item and call to function in the VM that start showing the graphs.
+        **/
         private void l1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (this.vm.threadIsRunning)
@@ -52,7 +56,7 @@ namespace FlightInspectionApp
             //this.vm.Rewind();
             //this.vm.vm_setSelectedColumns();
         }
-
+        
         private void stop_btn_Click(object sender, RoutedEventArgs e)
         {
             this.vm.Stop();
