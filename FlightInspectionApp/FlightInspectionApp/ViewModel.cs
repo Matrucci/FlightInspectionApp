@@ -351,6 +351,23 @@ namespace FlightInspectionApp
             }
         }
 
+        public void RegCSVButton()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "csv files (*.csv)|*.csv";
+            openFileDialog.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                //TODO add logic
+                string startupPath = System.IO.Directory.GetCurrentDirectory();
+                string destFile = startupPath + @"\new_reg_flight.csv";
+                System.IO.File.Copy(openFileDialog.FileName, destFile, true);
+                this.PropertyChanged(this, new PropertyChangedEventArgs("Reg"));
+            }
+        }
+
 
         //Getting an XML from the user
         public void XmlButtonClick()

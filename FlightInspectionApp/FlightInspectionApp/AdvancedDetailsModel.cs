@@ -113,8 +113,14 @@ namespace FlightInspectionApp
         public void setMap(string csvPath)
         {
             ////////////////////////
+            /*
+            int pos = csvPath.LastIndexOf(@"\") + 1;
             string startupPath = System.IO.Directory.GetCurrentDirectory();
-            string strFilePath = startupPath + @"\new_anomaly_flight.csv";
+            string strFilePath = startupPath + "new_" +  csvPath.Substring(pos, csvPath.Length - pos);
+            */
+            string startupPath = System.IO.Directory.GetCurrentDirectory();
+            string strFilePath = startupPath + "new_anomaly_flight.csv";
+
             string strSeperator = ",";
             StringBuilder sbOutput = new StringBuilder();
             sbOutput.AppendLine(string.Join(strSeperator, Colnames));

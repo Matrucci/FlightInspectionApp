@@ -10,6 +10,7 @@
 
 
 extern "C" __declspec(dllexport) void getAnomaly(const char* CSVLearnFileName, const char* CSVTestFileName, const char* txtFileName) {
+
 	TimeSeries tsLearn(CSVLearnFileName);
 	TimeSeries tsTest(CSVTestFileName);
 	SimpleAnomalyDetector simpleAD;

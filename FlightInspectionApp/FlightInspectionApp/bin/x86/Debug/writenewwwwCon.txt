@@ -1,4 +1,4 @@
-the correlativeFeatureName is: airspeed-kt
-the selectedFeature is: side-slip-deg
-minX is: -28.06977MinY is: 81.10585
-maxX is: 89.87057MaxY is: -23.77977
+the correlativeFeatureName is: encoder_pressure-alt-ft
+the selectedFeature is: altimeter_pressure-alt-ft
+minX is: -277.2581MinY is: -276.372
+maxX is: 435.6266MaxY is: 435.2138

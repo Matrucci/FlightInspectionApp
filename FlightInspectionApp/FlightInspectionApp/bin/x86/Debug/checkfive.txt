@@ -1,3 +1,3 @@
-selectedFeatureName is: side-slip-deg
+selectedFeatureName is: attitude-indicator_indicated-pitch-deg
 newStr is: 
 3
