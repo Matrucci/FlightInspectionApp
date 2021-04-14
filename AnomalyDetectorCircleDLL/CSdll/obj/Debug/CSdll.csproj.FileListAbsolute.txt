@@ -1,0 +1,5 @@
+C:\peleg\MitkademTwo\AnomalyDetectorCircleDLL\CSdll\bin\Debug\CSdll.dll
+C:\peleg\MitkademTwo\AnomalyDetectorCircleDLL\CSdll\bin\Debug\CSdll.pdb
+C:\peleg\MitkademTwo\AnomalyDetectorCircleDLL\CSdll\obj\Debug\CSdll.csproj.CoreCompileInputs.cache
+C:\peleg\MitkademTwo\AnomalyDetectorCircleDLL\CSdll\obj\Debug\CSdll.dll
+C:\peleg\MitkademTwo\AnomalyDetectorCircleDLL\CSdll\obj\Debug\CSdll.pdb
