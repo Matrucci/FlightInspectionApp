@@ -57,9 +57,17 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AnomalyDetectorCircleDLL, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Plugin\AnomalyDetectorCircleDLL\Debug\AnomalyDetectorCircleDLL.dll</HintPath>
+    </Reference>
     <Reference Include="AnomalyDetectorDLL, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\x86\Debug\AnomalyDetectorDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="AnomalyDetectorLineDLL, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Plugin\AnomalyDetectorLineDLL\Debug\AnomalyDetectorLineDLL.dll</HintPath>
     </Reference>
     <Reference Include="OxyPlot, Version=2.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
       <HintPath>..\packages\OxyPlot.Core.2.0.0\lib\net45\OxyPlot.dll</HintPath>

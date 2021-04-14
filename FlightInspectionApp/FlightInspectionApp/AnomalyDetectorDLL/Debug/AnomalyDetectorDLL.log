@@ -1,7 +1,6 @@
 ﻿  anomaly_detection_util.cpp
-H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\AnomalyDetectorDLL\anomaly_detection_util.cpp(1,10): fatal error C1083: Cannot open include file: 'pch.h': No such file or directory
   API.cpp
-H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\AnomalyDetectorDLL\API.cpp(1,10): fatal error C1083: Cannot open include file: 'pch.h': No such file or directory
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\AnomalyDetectorDLL\commands.h(182,17): warning C4244: 'argument': conversion from 'const long' to 'float', possible loss of data
   pch.cpp
 C:\Users\Matan Saloniko\Desktop\New folder\Peleg\FlightInspectionApp-Peleg\pch.h(11,10): fatal error C1083: Cannot open include file: 'framework.h': No such file or directory
   SimpleAnomalyDetector.cpp
@@ -9,11 +8,8 @@ C:\Users\Matan Saloniko\Desktop\New folder\Peleg\FlightInspectionApp-Peleg\pch.h
   timeseries.cpp
 C:\Users\Matan Saloniko\Desktop\New folder\Peleg\FlightInspectionApp-Peleg\pch.h(11,10): fatal error C1083: Cannot open include file: 'framework.h': No such file or directory
   CLI.cpp
-H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\AnomalyDetectorDLL\CLI.cpp(1,10): fatal error C1083: Cannot open include file: 'pch.h': No such file or directory
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\AnomalyDetectorDLL\commands.h(182,17): warning C4244: 'argument': conversion from 'const long' to 'float', possible loss of data
   dllmain.cpp
-H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\AnomalyDetectorDLL\dllmain.cpp(2,10): fatal error C1083: Cannot open include file: 'pch.h': No such file or directory
   HybridAnomalyDetector.cpp
-H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\AnomalyDetectorDLL\HybridAnomalyDetector.cpp(1,10): fatal error C1083: Cannot open include file: 'pch.h': No such file or directory
   minCircle.cpp
-H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\AnomalyDetectorDLL\minCircle.cpp(1,10): fatal error C1083: Cannot open include file: 'pch.h': No such file or directory
   Generating Code...

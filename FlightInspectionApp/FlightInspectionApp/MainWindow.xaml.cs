@@ -94,8 +94,8 @@ namespace FlightInspectionApp
             if (Regex.Match(e.PropertyName, @"(.{3})\s*$").ToString().Equals("xml"))
             {
                 this.xmlPath = e.PropertyName;
-                upload_csv_btn.Visibility = Visibility.Visible;
                 upload_xml_btn.Visibility = Visibility.Hidden;
+                upload_csv_reg_btn.Visibility = Visibility.Visible;
             }
             else if (Regex.Match(e.PropertyName, @"(.{3})\s*$").ToString().Equals("csv"))
             {
@@ -103,6 +103,13 @@ namespace FlightInspectionApp
                 this.playback_controls.Visibility = Visibility.Visible;
                 this.controllers.Visibility = Visibility.Visible;
                 upload_csv_btn.Visibility = Visibility.Hidden;
+                this.details_btn.Visibility = Visibility.Visible;
+                upload_csv_reg_btn.Visibility = Visibility.Hidden;
+            }
+            else if (e.PropertyName.Equals("Reg"))
+            {
+                upload_csv_reg_btn.Visibility = Visibility.Hidden;
+                upload_csv_btn.Visibility = Visibility.Visible;
             }
             /*else if (e.PropertyName.Equals("VM_Elevator"))
             {
@@ -131,8 +138,13 @@ namespace FlightInspectionApp
 
         private void details_btn_Click(object sender, RoutedEventArgs e)
         {
-            AdvancedDetails ad = new AdvancedDetails(CSVPath, XMLPath);
+            AdvancedDetails ad = new AdvancedDetails(CSVPath, XMLPath, this.vm.GetFlightGear());
             ad.Show();
+        }
+
+        private void upload_csv_reg_btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.vm.RegCSVButton();
         }
     }
 }

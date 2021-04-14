@@ -1,0 +1,11 @@
+C:\peleg\MitkademTwo\AnomalyDetectorCircleDLL\CSdll\bin\x86\Debug\CSdll.dll
+C:\peleg\MitkademTwo\AnomalyDetectorCircleDLL\CSdll\bin\x86\Debug\CSdll.pdb
+C:\peleg\MitkademTwo\AnomalyDetectorCircleDLL\CSdll\obj\x86\Debug\CSdll.csprojAssemblyReference.cache
+C:\peleg\MitkademTwo\AnomalyDetectorCircleDLL\CSdll\obj\x86\Debug\CSdll.csproj.CoreCompileInputs.cache
+C:\peleg\MitkademTwo\AnomalyDetectorCircleDLL\CSdll\obj\x86\Debug\CSdll.dll
+C:\peleg\MitkademTwo\AnomalyDetectorCircleDLL\CSdll\obj\x86\Debug\CSdll.pdb
+H:\Advanced Programming\FlightInspectionApp\Plugin\AnomalyDetectorCircleDLL\CSdll\bin\x86\Debug\CSdll.dll
+H:\Advanced Programming\FlightInspectionApp\Plugin\AnomalyDetectorCircleDLL\CSdll\bin\x86\Debug\CSdll.pdb
+H:\Advanced Programming\FlightInspectionApp\Plugin\AnomalyDetectorCircleDLL\CSdll\obj\x86\Debug\CSdll.csprojAssemblyReference.cache
+H:\Advanced Programming\FlightInspectionApp\Plugin\AnomalyDetectorCircleDLL\CSdll\obj\x86\Debug\CSdll.dll
+H:\Advanced Programming\FlightInspectionApp\Plugin\AnomalyDetectorCircleDLL\CSdll\obj\x86\Debug\CSdll.pdb
