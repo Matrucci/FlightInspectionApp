@@ -13,10 +13,12 @@ namespace FlightInspectionApp
 {
     class AdvancedDetailsVM : IViewModel
     {
+    //create 3 plotModels that show the graphs
         public PlotModel plotModel { get; set; }
         public PlotModel plotModelTwo { get; set; }
         public PlotModel plotModelThree { get; set; }
 
+//seting the lines for the graphs
         public LineSeries lineSeries1 = new LineSeries();
         public LineSeries lineSeries2 = new LineSeries();
         public LineSeries lineSeries3 = new LineSeries();
@@ -95,6 +97,7 @@ namespace FlightInspectionApp
             plotModelThree.Series.Add(lineSeries3AnomalyPoints);
         }
 
+
         public AdvancedDetailsVM(string xml, string csv, FlightGearClient fg, string dllPath)
         {
             user = new AdvancedDetailsModel(csv, xml, dllPath);
@@ -155,6 +158,7 @@ namespace FlightInspectionApp
             plotModelThree.Series.Add(lineSeries3AnomalyPoints);
         }
 
+//OnPropertyChanged- for notify after changing values
         public void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName.Equals("LineNumber"))
