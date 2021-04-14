@@ -509,6 +509,7 @@ namespace FlightInspectionApp
                     OnPropertyChange("plotModel");
                     OnPropertyChange("plotModelTwo");
                     OnPropertyChange("plotModelThree");
+                    Thread.Sleep(50);
                 }
             });
             this.t.Start();            

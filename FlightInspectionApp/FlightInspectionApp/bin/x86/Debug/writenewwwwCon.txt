@@ -1,4 +1,4 @@
-the correlativeFeatureName is: aileron
-the selectedFeature is: APU-generator
-minX is: 0MinY is: NaN
-maxX is: 0MaxY is: NaN
+the correlativeFeatureName is: airspeed-kt
+the selectedFeature is: side-slip-deg
+minX is: -28.06977MinY is: 81.10585
+maxX is: 89.87057MaxY is: -23.77977
