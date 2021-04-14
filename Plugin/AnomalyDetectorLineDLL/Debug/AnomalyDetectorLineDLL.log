@@ -1,0 +1,19 @@
+﻿  pch.cpp
+  anomaly_detection_util.cpp
+  API.cpp
+H:\Advanced Programming\FlightInspectionApp\Plugin\AnomalyDetectorLineDLL\commands.h(184,17): warning C4244: 'argument': conversion from 'const long' to 'float', possible loss of data
+  CLI.cpp
+H:\Advanced Programming\FlightInspectionApp\Plugin\AnomalyDetectorLineDLL\commands.h(184,17): warning C4244: 'argument': conversion from 'const long' to 'float', possible loss of data
+  dllmain.cpp
+  HybridAnomalyDetector.cpp
+  minCircle.cpp
+  SimpleAnomalyDetector.cpp
+H:\Advanced Programming\FlightInspectionApp\Plugin\AnomalyDetectorLineDLL\SimpleAnomalyDetector.cpp(141,38): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+H:\Advanced Programming\FlightInspectionApp\Plugin\AnomalyDetectorLineDLL\SimpleAnomalyDetector.cpp(147,40): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  timeseries.cpp
+  Generating Code...
+  .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+  anomaly_detection_util.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  anomaly_detection_util.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+     Creating library H:\Advanced Programming\FlightInspectionApp\Plugin\AnomalyDetectorLineDLL\Debug\AnomalyDetectorLineDLL.lib and object H:\Advanced Programming\FlightInspectionApp\Plugin\AnomalyDetectorLineDLL\Debug\AnomalyDetectorLineDLL.exp
+  AnomalyDetectorLineDLL.vcxproj -> H:\Advanced Programming\FlightInspectionApp\Plugin\AnomalyDetectorLineDLL\Debug\AnomalyDetectorLineDLL.dll

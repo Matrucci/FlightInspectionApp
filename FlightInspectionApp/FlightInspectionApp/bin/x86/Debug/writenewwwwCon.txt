@@ -1,4 +1,4 @@
-the correlativeFeatureName is: airspeed-indicator_indicated-speed-kt
-the selectedFeature is: altitude-ft
-minX is: -9999MinY is: -27.31235
-maxX is: 850.5734MaxY is: 62.55731
+the correlativeFeatureName is: encoder_pressure-alt-ft
+the selectedFeature is: altimeter_pressure-alt-ft
+minX is: -277.2581MinY is: -276.372
+maxX is: 435.6266MaxY is: 435.2138

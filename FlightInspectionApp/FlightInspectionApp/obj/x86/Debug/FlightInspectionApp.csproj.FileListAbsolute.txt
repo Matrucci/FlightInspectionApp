@@ -32,7 +32,6 @@ H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspection
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csproj.CopyComplete
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.exe
 H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.pdb
-H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csprojAssemblyReference.cache
 C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.exe.config
 C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.exe
 C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\FlightInspectionApp.pdb
@@ -68,3 +67,8 @@ C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a
 C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csproj.CopyComplete
 C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.exe
 C:\Users\Matan Saloniko\Desktop\New folder\test\FlightInspectionApp-d214c2e8785a6ab052a960bbe4881af72a380fe4\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.pdb
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\AnomalyDetectorCircleDLL.dll
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\AnomalyDetectorCircleDLL.pdb
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\AnomalyDetectorLineDLL.dll
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug\AnomalyDetectorLineDLL.pdb
+H:\Advanced Programming\FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\obj\x86\Debug\FlightInspectionApp.csprojAssemblyReference.cache

@@ -1,0 +1,3 @@
+C:\peleg\MitkademTwo\AnomalyDetectorCircleDLL\Debug\AnomalyDetectorCircleDLL.dll
+C:\peleg\MitkademTwo\AnomalyDetectorCircleDLL\Debug\AnomalyDetectorCircleDLL.pdb
+C:\peleg\MitkademTwo\AnomalyDetectorCircleDLL\Debug\AnomalyDetectorCircleDLL.vcxprojAssemblyReference.cache

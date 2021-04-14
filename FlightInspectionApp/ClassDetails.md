@@ -15,12 +15,15 @@ This class is the model and it handles the back end of the application. From sen
 
 ## AdvancedDetails:
 This class is the front end of the graphs and the advanced details about the flight. It also marks anomalies in the graph.
+These graphs are updated according to the clicks on the "slider" so that if you press the stop or run button the graph display is updated accordingly.
 
 ## AdvancedDetailsVM:
 The ViewModel of the advanced details part. Communicates with the model and the view in order to transfer data between them independently.
+Moreover, the ViewModel is responsible for the logical part of creating the graph in Oxyplot.
 
 ## AdvancedDetailsModel:
 This class handles the back end and "heavy lifting" of the graph creation.
+In addition, he is responsible for communicating with the Dll and by this we used the code we wrote in the first semester (in C ++).
 
 # User Controls
 

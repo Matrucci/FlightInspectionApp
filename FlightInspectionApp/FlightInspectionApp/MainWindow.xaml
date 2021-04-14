@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FlightInspectionApp"
         mc:Ignorable="d"
         xmlns:Controls="clr-namespace:FlightInspectionApp.controls"
-        Title="Main App" Height="750" Width="1500">
+        Title="Main App" Height="750" Width="1200">
 
     <Grid Background="Black">
         <StackPanel Orientation="Vertical">
@@ -21,8 +21,10 @@
                 <Slider Name="slider_rudder" Width="340" HorizontalAlignment="Left" Margin="45, 10, 10, 10" Value="{Binding VM_Rudder}" Minimum="-1" Maximum="1"/>
             </StackPanel>
         </StackPanel>
-        <Button x:Name="details_btn" Width="100" Height="40" Content="Advanced details" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="30, 0, 0, 30" Click="details_btn_Click"/>
-        <Button x:Name="upload_xml_btn" Content="Upload XML File" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,150,30" Width="100" Height="40" Click="Upload_xml_btn_Click"/>
-        <Button x:Name="upload_csv_btn" Content="Upload CSV File" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,25,30" Width="100" Height="40" Click="Upload_csv_btn_Click"/>
+        <Button x:Name="details_btn" Width="100" Height="40" Content="Advanced details" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="30, 0, 0, 30" Click="details_btn_Click" Visibility="Hidden"/>
+        <Button x:Name="upload_xml_btn" Content="Upload XML File" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,200,30" Width="150" Height="40" Click="Upload_xml_btn_Click"/>
+        <Button x:Name="upload_csv_reg_btn" Content="Upload train CSV" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,200,30" Width="150" Height="40" Visibility="Hidden" Click="upload_csv_reg_btn_Click"/>
+        <Button x:Name="upload_csv_btn" Content="Upload anomaly CSV File" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,25,30" Width="150" Height="40" Click="Upload_csv_btn_Click"/>
+        <Button x:Name="upload_dll" Content="Upload your DLL" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30, 0, 0, 30" Width="150" Height="40" Click="upload_dll_Click"/>
     </Grid>
 </Window>

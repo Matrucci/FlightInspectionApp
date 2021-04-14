@@ -20,6 +20,7 @@ namespace FlightInspectionApp
         private FlightGearClient model;
         //private IModel model;
         Thread t;
+        private AdvancedDetailsVM advm;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -168,9 +169,13 @@ namespace FlightInspectionApp
 
         public int VM_LineNumber
         {
-            get { return this.model.GetCurrentLine(); }
+            get 
+            {
+                return this.model.GetCurrentLine(); 
+            }
             set
             {
+                //this.advm.Rewind(value);
                 this.model.SetCurrentLine(value);
             }
         }
@@ -233,6 +238,11 @@ namespace FlightInspectionApp
             this.model.PropertyChanged += OnPropertyChanged;
         }
 
+        public FlightGearClient GetFlightGear()
+        {
+            return this.model;
+        }
+
         public void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName.Equals("Yaw"))
@@ -249,6 +259,10 @@ namespace FlightInspectionApp
             {
                 this.PropertyChanged(this, new PropertyChangedEventArgs("VM_Altimeter_Top"));
                 this.PropertyChanged(this, new PropertyChangedEventArgs("VM_Altimeter_Bot"));
+            }
+            else if (e.PropertyName.Equals("LineNumber"))
+            {
+                //this.advm.Rewind(this.model.GetCurrentLine());
             }
             this.PropertyChanged(this, new PropertyChangedEventArgs("VM_" + e.PropertyName));
         }
@@ -334,6 +348,36 @@ namespace FlightInspectionApp
 
                 this.t = new Thread(() => this.model.SendFile(csvPath));
                 this.t.Start();
+            }
+        }
+
+        public void RegCSVButton()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "csv files (*.csv)|*.csv";
+            openFileDialog.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                //TODO add logic
+                string startupPath = System.IO.Directory.GetCurrentDirectory();
+                string destFile = startupPath + @"\new_reg_flight.csv";
+                System.IO.File.Copy(openFileDialog.FileName, destFile, true);
+                this.PropertyChanged(this, new PropertyChangedEventArgs("Reg"));
+            }
+        }
+
+        public void PressDLL()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "dll files (*.dll)|*.dll";
+            openFileDialog.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(openFileDialog.FileName));
             }
         }
 

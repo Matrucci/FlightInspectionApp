@@ -28,6 +28,7 @@ namespace FlightInspectionApp
         private ViewModel vm;
         private string csvPath;
         private string xmlPath;
+        private string dllPath;
      
         private string CSVPath
         {
@@ -60,6 +61,7 @@ namespace FlightInspectionApp
             InitializeComponent();
             upload_csv_btn.Visibility = Visibility.Hidden;
             this.vm = new ViewModel(this);
+            this.upload_dll.Visibility = Visibility.Hidden;
             vm.PropertyChanged += OnPropertyChanged;
 
             this.playback_controls.Notify += OnPlayback;
@@ -94,8 +96,8 @@ namespace FlightInspectionApp
             if (Regex.Match(e.PropertyName, @"(.{3})\s*$").ToString().Equals("xml"))
             {
                 this.xmlPath = e.PropertyName;
-                upload_csv_btn.Visibility = Visibility.Visible;
                 upload_xml_btn.Visibility = Visibility.Hidden;
+                upload_csv_reg_btn.Visibility = Visibility.Visible;
             }
             else if (Regex.Match(e.PropertyName, @"(.{3})\s*$").ToString().Equals("csv"))
             {
@@ -103,6 +105,20 @@ namespace FlightInspectionApp
                 this.playback_controls.Visibility = Visibility.Visible;
                 this.controllers.Visibility = Visibility.Visible;
                 upload_csv_btn.Visibility = Visibility.Hidden;
+                //this.details_btn.Visibility = Visibility.Visible;
+                upload_csv_reg_btn.Visibility = Visibility.Hidden;
+                upload_dll.Visibility = Visibility.Visible;
+            }
+            else if (e.PropertyName.Equals("Reg"))
+            {
+                upload_csv_reg_btn.Visibility = Visibility.Hidden;
+                upload_csv_btn.Visibility = Visibility.Visible;
+            }
+            else if (Regex.Match(e.PropertyName, @"(.{3})\s*$").ToString().Equals("dll"))
+            {
+                this.details_btn.Visibility = Visibility.Visible;
+                upload_dll.Visibility = Visibility.Hidden;
+                this.dllPath = e.PropertyName.ToString();
             }
             /*else if (e.PropertyName.Equals("VM_Elevator"))
             {
@@ -131,8 +147,19 @@ namespace FlightInspectionApp
 
         private void details_btn_Click(object sender, RoutedEventArgs e)
         {
-            AdvancedDetails ad = new AdvancedDetails(CSVPath, XMLPath);
+            AdvancedDetails ad = new AdvancedDetails(CSVPath, XMLPath, this.vm.GetFlightGear(), dllPath);
             ad.Show();
+        }
+
+        private void upload_csv_reg_btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.vm.RegCSVButton();
+        }
+
+        private void upload_dll_Click(object sender, RoutedEventArgs e)
+        {
+            this.vm.PressDLL();
+
         }
     }
 }
