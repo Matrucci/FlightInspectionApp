@@ -5,8 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
 using System.IO;
 using System.Xml;
 using System.Data;
@@ -75,7 +73,7 @@ namespace FlightInspectionApp
             //create a map and a new CSV file with the headers
             setMap(csvPath);
             ctd = new Connection();
-            ctd.setSelectedName(SelectedItem);
+            //ctd.setSelectedName(SelectedItem);
             setAnomalyMap();
         }
 
@@ -223,9 +221,10 @@ namespace FlightInspectionApp
             this.linearRegPoints.Clear();
             this.anomalyPoints.Clear();
             this.shapePoints.Clear();
+            ctd.setSelectedName(SelectedItem);
+
             float minX = (mapCSV[SelectedItem]).Min();
             float maxX = (mapCSV[SelectedItem]).Max();
-            ctd.setSelectedName(SelectedItem);
 
             string startupPath = System.IO.Directory.GetCurrentDirectory();
 
@@ -234,6 +233,7 @@ namespace FlightInspectionApp
 
             int columnSize = (mapCSV[SelectedItem]).Count;
 
+            /*
             //////////////////////////////////
             using (StreamWriter writetext = new StreamWriter("writenewwwwTwo.txt"))
             {
@@ -245,6 +245,7 @@ namespace FlightInspectionApp
                 }
             }
             //////////////////////////////////
+            ///*/
 
             this.SelectedColumnAxis = (mapCSV[SelectedItem]).ToList();
             this.CorrelativeColumnAxis = (mapCSV[correlativeFeature]).ToList();

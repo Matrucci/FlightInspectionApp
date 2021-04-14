@@ -238,6 +238,11 @@ namespace FlightInspectionApp
             this.model.PropertyChanged += OnPropertyChanged;
         }
 
+        public FlightGearClient GetFlightGear()
+        {
+            return this.model;
+        }
+
         public void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName.Equals("Yaw"))

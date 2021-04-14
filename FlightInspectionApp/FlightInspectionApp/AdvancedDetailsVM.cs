@@ -24,14 +24,17 @@ namespace FlightInspectionApp
         public ScatterSeries lineSeries3AnomalyPoints = new ScatterSeries();
         public ScatterSeries lineSeries3ShapePoints = new ScatterSeries();
         public Boolean stop;
+        public bool isActive;
         Thread t;
         public bool rewind;
         public bool threadIsRunning;
         public static Mutex mutex = new Mutex();
+        //private int iteration;
 
         public int iteration = 0;
 
         private AdvancedDetailsModel user;
+        private FlightGearClient fgc;
 
         public AdvancedDetailsVM()
         {
@@ -92,11 +95,14 @@ namespace FlightInspectionApp
             plotModelThree.Series.Add(lineSeries3AnomalyPoints);
         }
 
-        public AdvancedDetailsVM(string xml, string csv)
+        public AdvancedDetailsVM(string xml, string csv, FlightGearClient fg)
         {
             user = new AdvancedDetailsModel(csv, xml);
             stop = false;
             rewind = false;
+            this.fgc = fg;
+            this.fgc.PropertyChanged += OnPropertyChanged;
+            this.isActive = false;
 
             // Create the plot model
             plotModel = new PlotModel();
@@ -147,6 +153,17 @@ namespace FlightInspectionApp
             plotModelThree.Series.Add(lineSeries3);
             plotModelThree.Series.Add(lineSeries3Scatter);
             plotModelThree.Series.Add(lineSeries3AnomalyPoints);
+        }
+
+        public void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName.Equals("LineNumber"))
+            {
+                mutex.WaitOne();
+                this.iteration = this.fgc.GetCurrentLine();
+                mutex.ReleaseMutex();
+                //Rewind(this.fgc.GetCurrentLine());
+            }
         }
 
         public string vm_SelectedItem
@@ -353,6 +370,13 @@ namespace FlightInspectionApp
             lineSeries3ShapePoints.Points.Clear();
             plotModelThree.Axes.Clear();
         }
+
+        public void Show()
+        {
+            Thread th = new Thread(() => { Rewind(); });
+            th.Start();
+        }
+
         public void Stop()
         {
             this.stop = true;
@@ -360,61 +384,136 @@ namespace FlightInspectionApp
             this.t.Abort();
         }
 
-        public void Rewind(int iteration)
+        public void Rewind()
         {
-            //mutex.WaitOne();
-            this.rewind = true;
-            //mutex.ReleaseMutex();
-            if (this.stop == true)
+            if (this.isActive == false)
             {
-                this.stop = false;
-                this.vm_setSelectedColumns();
+                return;
             }
-            //iteration = 300;
-            lineSeries1.Points.Clear();
-            lineSeries2.Points.Clear();
-            lineSeries3Scatter.Points.Clear();
-            if (iteration >= 300)
-            {
-                for (int i = iteration - 300; i <= iteration; i++)
-                {
-                    lineSeries1.Points.Add(new DataPoint(vm_TimeAxis.ElementAt(i), vm_SelectedColumnAxis.ElementAt(i)));
-                    lineSeries2.Points.Add(new DataPoint(vm_TimeAxis.ElementAt(i), vm_CorrelativeColumnAxis.ElementAt(i)));
+            user.setSelectedColumns();
+            plotModel.Title = vm_SelectedItem;
+            plotModel.TitleFontSize = 16;
+            plotModelTwo.Title = user.getCorrelativeFeature();
+            plotModelTwo.TitleFontSize = 16;
+            plotModelThree.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = vm_SelectedItem });
+            plotModelThree.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = user.getCorrelativeFeature() });
 
-                    if (i % 10 == 0)
-                    {
-                        if (i > 300)
-                        {
-                            lineSeries3Scatter.Points.RemoveAt(0);
-                        }
-                        lineSeries3Scatter.Points.Add(new ScatterPoint(vm_SelectedColumnAxis.ElementAt(i), vm_CorrelativeColumnAxis.ElementAt(i), 3));
-                    }
-                }
-            } 
-            else
-            {
-                for (int i = 0; i <= iteration; i++)
-                {
-                    lineSeries1.Points.Add(new DataPoint(vm_TimeAxis.ElementAt(i), vm_SelectedColumnAxis.ElementAt(i)));
-                    lineSeries2.Points.Add(new DataPoint(vm_TimeAxis.ElementAt(i), vm_CorrelativeColumnAxis.ElementAt(i)));
+            int sizeOfIteration = (vm_TimeAxis.Count) - 1;
+            int numberOfAnomalies = (user.getAnomalyPoints()).Count;
+            int numberOfShapePoints = (user.getShapePoints()).Count;
 
-                    if (i % 10 == 0)
-                    {
-                        if (i > 300)
-                        {
-                            lineSeries3Scatter.Points.RemoveAt(0);
-                        }
-                        lineSeries3Scatter.Points.Add(new ScatterPoint(vm_SelectedColumnAxis.ElementAt(i), vm_CorrelativeColumnAxis.ElementAt(i), 3));
-                    }
-                }
-            }
-            
-            plotModel.InvalidatePlot(true);
-            plotModelTwo.InvalidatePlot(true);
+            //get the minimum point of the linear regration line
+            DataPoint minLinearRegPoint = (user.getLinearRegPoints()).ElementAt(0);
+            //get the maximum point of the linear regration line
+            DataPoint maxLinearRegPoint = (user.getLinearRegPoints()).ElementAt(1);
+
+            //add the min point to the line of plotModelThree
+            lineSeries3.Points.Add(minLinearRegPoint);
+            //add the max point to the line of plotModelThree
+            lineSeries3.Points.Add(maxLinearRegPoint);
             plotModelThree.InvalidatePlot(true);
-            OnPropertyChange("plotModel");
-            OnPropertyChange("plotModelTwo");
-            OnPropertyChange("plotModelThree");
+
+            for (int i = 0; i < numberOfAnomalies; i++)
+            {
+                ScatterPoint currentPoint = (user.getAnomalyPoints()).ElementAt(i);
+                lineSeries3AnomalyPoints.Points.Add((user.getAnomalyPoints()).ElementAt(i));
+            }
+            plotModelThree.InvalidatePlot(true);
+
+            for (int i = 0; i < numberOfShapePoints; i++)
+            {
+                ScatterPoint currentPoint = (user.getShapePoints()).ElementAt(i);
+                lineSeries3ShapePoints.Points.Add((user.getShapePoints()).ElementAt(i));
+            }
+            plotModelThree.InvalidatePlot(true);
+
+            this.threadIsRunning = true;
+            int current = this.iteration;
+
+            //
+            this.t = new Thread(() =>
+            {
+                while (true)
+                {
+                    if (current < this.iteration)
+                    {
+                        lineSeries1.Points.Clear();
+                        lineSeries2.Points.Clear();
+                        lineSeries3Scatter.Points.Clear();
+                    }
+                    current = this.iteration;
+                    //rewind = false;
+                    /*
+                    lineSeries3.Points.Clear();
+                    lineSeries3AnomalyPoints.Points.Clear();
+                    lineSeries3ShapePoints.Points.Clear();
+                    plotModelThree.Axes.Clear();*/
+
+                    //int iteration = 0;
+                    stop = false;
+
+                    this.threadIsRunning = true;
+                    //mutex.WaitOne();
+                    //this.rewind = true;
+                    //mutex.ReleaseMutex();
+                    if (this.stop == true)
+                    {
+                        this.stop = false;
+                        //this.vm_setSelectedColumns();
+                    }
+                    //iteration = 300;
+                    
+                    lineSeries1.Points.Clear();
+                    lineSeries2.Points.Clear();
+                    lineSeries3Scatter.Points.Clear();
+                    
+                    if (this.iteration >= 300)
+                    {
+                        for (int i = this.iteration - 300; i <= this.iteration; i++)
+                        {
+                            lineSeries1.Points.Add(new DataPoint(vm_TimeAxis.ElementAt(i), vm_SelectedColumnAxis.ElementAt(i)));
+                            lineSeries2.Points.Add(new DataPoint(vm_TimeAxis.ElementAt(i), vm_CorrelativeColumnAxis.ElementAt(i)));
+                            
+                            if (i % 10 == 0)
+                            {
+                                if (lineSeries3Scatter.Points.Count > 30)
+                                {
+                                    lineSeries3Scatter.Points.RemoveAt(0);
+                                }
+                                lineSeries3Scatter.Points.Add(new ScatterPoint(vm_SelectedColumnAxis.ElementAt(i), vm_CorrelativeColumnAxis.ElementAt(i), 3));
+                            }
+                        }
+                    }
+                    else
+                    {
+                        for (int i = 0; i < this.iteration; i++)
+                        {
+                            lineSeries1.Points.Add(new DataPoint(vm_TimeAxis.ElementAt(i), vm_SelectedColumnAxis.ElementAt(i)));
+                            lineSeries2.Points.Add(new DataPoint(vm_TimeAxis.ElementAt(i), vm_CorrelativeColumnAxis.ElementAt(i)));
+
+                            if (i % 10 == 0)
+                            {
+                                /*
+                                if (i > 300)
+                                {
+                                    lineSeries3Scatter.Points.RemoveAt(0);
+                                }*/
+                                lineSeries3Scatter.Points.Add(new ScatterPoint(vm_SelectedColumnAxis.ElementAt(i), vm_CorrelativeColumnAxis.ElementAt(i), 3));
+                            }
+                        }
+                    }
+
+                    plotModel.InvalidatePlot(true);
+                    plotModelTwo.InvalidatePlot(true);
+                    plotModelThree.InvalidatePlot(true);
+                    OnPropertyChange("plotModel");
+                    OnPropertyChange("plotModelTwo");
+                    OnPropertyChange("plotModelThree");
+                }
+            });
+            this.t.Start();            
+                
+                
         }
 
         public int GetMinimumSliderValue()

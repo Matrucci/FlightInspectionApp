@@ -132,7 +132,7 @@ namespace FlightInspectionApp
 
         private void details_btn_Click(object sender, RoutedEventArgs e)
         {
-            AdvancedDetails ad = new AdvancedDetails(CSVPath, XMLPath);
+            AdvancedDetails ad = new AdvancedDetails(CSVPath, XMLPath, this.vm.GetFlightGear());
             ad.Show();
         }
     }

@@ -28,11 +28,11 @@ namespace FlightInspectionApp
             this.DataContext = vm;
         }
 
-        public AdvancedDetails(string xml, string csv)
+        public AdvancedDetails(string xml, string csv, FlightGearClient fg)
         {
             InitializeComponent();
             this.InitializeComponent();
-            this.vm = new AdvancedDetailsVM(csv, xml);
+            this.vm = new AdvancedDetailsVM(csv, xml, fg);
             this.DataContext = vm;
         }
         private void l1_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -42,12 +42,15 @@ namespace FlightInspectionApp
                 this.vm.Stop();
             }
             this.vm.stop = true;
+            this.vm.isActive = true;
             this.vm.iteration = 0;
             this.vm.Start();
             // Get the currently selected item in the ListBox.
             string selectedItem = l1.SelectedItem.ToString();
             //MessageBox.Show(selectedItem);
-            this.vm.vm_setSelectedColumns();
+            this.vm.Show();
+            //this.vm.Rewind();
+            //this.vm.vm_setSelectedColumns();
         }
 
         private void stop_btn_Click(object sender, RoutedEventArgs e)

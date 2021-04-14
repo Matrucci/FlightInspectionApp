@@ -1,4 +1,4 @@
 the correlativeFeatureName is: aileron
-the selectedFeature is: slats
+the selectedFeature is: APU-generator
 minX is: 0MinY is: NaN
 maxX is: 0MaxY is: NaN
