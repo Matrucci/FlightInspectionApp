@@ -1,0 +1,6 @@
+C:\peleg\MitkademTwo\AnomalyDetectorLineDLL\Debug\CSdll\bin\Debug\CSdll.dll
+C:\peleg\MitkademTwo\AnomalyDetectorLineDLL\Debug\CSdll\bin\Debug\CSdll.pdb
+C:\peleg\MitkademTwo\AnomalyDetectorLineDLL\Debug\CSdll\obj\Debug\CSdll.csprojAssemblyReference.cache
+C:\peleg\MitkademTwo\AnomalyDetectorLineDLL\Debug\CSdll\obj\Debug\CSdll.csproj.CoreCompileInputs.cache
+C:\peleg\MitkademTwo\AnomalyDetectorLineDLL\Debug\CSdll\obj\Debug\CSdll.dll
+C:\peleg\MitkademTwo\AnomalyDetectorLineDLL\Debug\CSdll\obj\Debug\CSdll.pdb
