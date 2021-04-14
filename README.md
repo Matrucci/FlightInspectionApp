@@ -12,7 +12,7 @@ In this project, we worked on several features:
 - Interfacing with FlightGear (we worked with FlightGear 2020.3.6, but most versions would work).
 - We created an application that works side by side with FlightGear and provides playback controls, visual representation of the airplane's controllers, the data about the flight and provides some analysis about the data in graph form.
 - The program allows the user to upload 2 csv files, checks for anomalies about the second flight and marks them with red dots in the graph.
-- https://www.youtube.com/watch?v=2FmdOqeiMnY
+- https://www.youtube.com/watch?v=-1u1TH1T4Hk
 
 ## Requirements:
 
