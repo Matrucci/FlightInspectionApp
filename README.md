@@ -57,6 +57,7 @@ The user who prepares the CSdll.dll file should make sure that in the first line
 
 ### Running
 
+- Open the sln file in Visual Studio.
 - To run the application press ctrl+F5 in order to run without debugging.
 - Run the FlightGear application with the configurations above.
 - Upload your xml file that describes the flight's values (you can build your own but we have provided a file for example that would work).
