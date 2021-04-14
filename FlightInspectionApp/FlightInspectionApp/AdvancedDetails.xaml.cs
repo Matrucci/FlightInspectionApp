@@ -52,7 +52,7 @@ namespace FlightInspectionApp
         private void rewind_btn_Click(object sender, RoutedEventArgs e)
         {
 
-            this.vm.Rewind();
+            //this.vm.Rewind();
         }
     }
 }

@@ -1,3 +1,3 @@
-selectedFeatureName is: altitude-ft
+selectedFeatureName is: electric-pump
 newStr is: 
 3

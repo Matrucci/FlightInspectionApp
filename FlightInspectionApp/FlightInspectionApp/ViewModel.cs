@@ -20,6 +20,7 @@ namespace FlightInspectionApp
         private FlightGearClient model;
         //private IModel model;
         Thread t;
+        private AdvancedDetailsVM advm;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -168,7 +169,11 @@ namespace FlightInspectionApp
 
         public int VM_LineNumber
         {
-            get { return this.model.GetCurrentLine(); }
+            get 
+            {
+                this.advm.Rewind(this.model.GetCurrentLine());
+                return this.model.GetCurrentLine(); 
+            }
             set
             {
                 this.model.SetCurrentLine(value);

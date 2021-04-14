@@ -262,7 +262,7 @@ namespace FlightInspectionApp
                         mutex.ReleaseMutex();
                     }
                     **/
-                    
+
 
                     plotModel.InvalidatePlot(true);
                     plotModelTwo.InvalidatePlot(true);
@@ -291,7 +291,7 @@ namespace FlightInspectionApp
             );
             this.t.Start();
 
-            
+
         }
 
         public void Start()
@@ -302,15 +302,44 @@ namespace FlightInspectionApp
 
         public void Stop()
         {
-           this.stop = true;
-           this.t.Abort();
+            this.stop = true;
+            this.t.Abort();
         }
 
-        public void Rewind()
+        public void Rewind(int iteration)
         {
-            mutex.WaitOne();
+            //mutex.WaitOne();
             this.rewind = true;
-            mutex.ReleaseMutex();
+            //mutex.ReleaseMutex();
+            if (this.stop == true)
+            {
+                this.stop = false;
+                this.vm_setSelectedColumns();
+            }
+            //iteration = 300;
+            lineSeries1.Points.Clear();
+            lineSeries2.Points.Clear();
+            lineSeries3Scatter.Points.Clear();
+            for (int i = 0; i <= iteration; i++)
+            {
+                lineSeries1.Points.Add(new DataPoint(vm_TimeAxis.ElementAt(i), vm_SelectedColumnAxis.ElementAt(i)));
+                lineSeries2.Points.Add(new DataPoint(vm_TimeAxis.ElementAt(i), vm_CorrelativeColumnAxis.ElementAt(i)));
+
+                if (i % 10 == 0)
+                {
+                    if (i > 300)
+                    {
+                        lineSeries3Scatter.Points.RemoveAt(0);
+                    }
+                    lineSeries3Scatter.Points.Add(new ScatterPoint(vm_SelectedColumnAxis.ElementAt(i), vm_CorrelativeColumnAxis.ElementAt(i), 3));
+                }
+            }
+            plotModel.InvalidatePlot(true);
+            plotModelTwo.InvalidatePlot(true);
+            plotModelThree.InvalidatePlot(true);
+            OnPropertyChange("plotModel");
+            OnPropertyChange("plotModelTwo");
+            OnPropertyChange("plotModelThree");
         }
 
         public int GetMinimumSliderValue()
@@ -322,6 +351,6 @@ namespace FlightInspectionApp
         {
             throw new NotImplementedException();
         }
-   
+
     }
 }

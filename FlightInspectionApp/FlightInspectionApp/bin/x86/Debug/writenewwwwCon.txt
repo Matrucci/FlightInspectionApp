@@ -1,4 +1,4 @@
-the correlativeFeatureName is: airspeed-indicator_indicated-speed-kt
-the selectedFeature is: altitude-ft
-minX is: -9999MinY is: -27.31235
-maxX is: 850.5734MaxY is: 62.55731
+the correlativeFeatureName is: aileron
+the selectedFeature is: electric-pump
+minX is: 0MinY is: NaN
+maxX is: 0MaxY is: NaN

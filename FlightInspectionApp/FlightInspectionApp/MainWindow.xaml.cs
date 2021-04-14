@@ -103,6 +103,7 @@ namespace FlightInspectionApp
                 this.playback_controls.Visibility = Visibility.Visible;
                 this.controllers.Visibility = Visibility.Visible;
                 upload_csv_btn.Visibility = Visibility.Hidden;
+                this.details_btn.Visibility = Visibility.Visible;
             }
             /*else if (e.PropertyName.Equals("VM_Elevator"))
             {

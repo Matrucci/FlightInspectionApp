@@ -48,7 +48,7 @@ namespace FlightInspectionApp
         public static extern float getMaxY(IntPtr str);
 
 
-        public string getCorrelativeFeature(string csvPath,float minX, float maxX)
+        public string getCorrelativeFeature(string csvPath, float minX, float maxX)
         {
             Console.WriteLine("connection1");
 
@@ -74,7 +74,7 @@ namespace FlightInspectionApp
                 writetext.WriteLine("maxX is: " + maxX + "MaxY is: " + MaxY);
             }
             ////////////////////////////
-            
+
 
             return correlativeFeatureName;
         }
