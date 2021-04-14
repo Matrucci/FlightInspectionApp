@@ -1,0 +1,3 @@
+selectedFeatureName is: throttle
+newStr is: 
+3

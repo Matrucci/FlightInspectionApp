@@ -1,0 +1,39 @@
++++++++aileron,slip-skid-ball_indicated-slip-skid+++++++
+c.cx=-0.183612 , c.cy=0.502034 , c.threshold=0.976037
+newwwww525
++++++++elevator,altimeter_indicated-altitude-ft+++++++
+c.cx=-0.072541 , c.cy=342.822144 , c.threshold=392.086700
+newwwww525
++++++++glideslope,vertical-speed-fps+++++++
+c.cx=-0.081313 , c.cy=-10.238319 , c.threshold=28.725891
+newwwww525
++++++++attitude-indicator_indicated-pitch-deg,attitude-indicator_internal-pitch-deg+++++++
+c.cx=3.573449 , c.cy=3.573449 , c.threshold=20.343567
+newwwww525
++++++++attitude-indicator_indicated-roll-deg,attitude-indicator_internal-roll-deg+++++++
+c.cx=1.280487 , c.cy=-18.719513 , c.threshold=47.307941
+newwwww525
++++++++attitude-indicator_internal-pitch-deg,gps_indicated-vertical-speed+++++++
+c.cx=0.484187 , c.cy=-607.060913 , c.threshold=1737.533325
+newwwww525
++++++++attitude-indicator_internal-roll-deg,turn-indicator_indicated-turn-rate+++++++
+c.cx=-8.940461 , c.cy=-0.112065 , c.threshold=31.437761
+newwwww525
++++++++gps_indicated-altitude-ft,gps_indicated-ground-speed-kt+++++++
+c.cx=425.286682 , c.cy=45.715046 , c.threshold=470.510315
+newwwww525
++++++++gps_indicated-ground-speed-kt,slip-skid-ball_indicated-slip-skid+++++++
+c.cx=46.783325 , c.cy=0.446847 , c.threshold=51.464191
+newwwww525
++++++++gps_indicated-vertical-speed,vertical-speed-indicator_indicated-speed-fpm+++++++
+c.cx=-1081.242676 , c.cy=705.273071 , c.threshold=3159.057129
+newwwww525
++++++++indicated-heading-deg,engine_rpm+++++++
+c.cx=-nan(ind) , c.cy=-nan(ind) , c.threshold=-nan(ind)
+newwwww525
++++++++magnetic-compass_indicated-heading-deg,turn-indicator_indicated-turn-rate+++++++
+c.cx=179.976349 , c.cy=0.125662 , c.threshold=197.974045
+newwwww525
++++++++vertical-speed-indicator_indicated-speed-fpm,engine_rpm+++++++
+c.cx=-nan(ind) , c.cy=-nan(ind) , c.threshold=-nan(ind)
+newwwww525

@@ -1,0 +1,4 @@
+the correlativeFeatureName is: engine_rpm
+the selectedFeature is: throttle
+minX is: 0MinY is: 701.0634
+maxX is: 1MaxY is: 2467.136
