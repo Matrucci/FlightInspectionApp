@@ -64,6 +64,13 @@ The user who prepares the CSdll.dll file should make sure that in the first line
 - Upload your csv file with the flight's values (again, you can provide your own but one is provided inside the project's folder).
 - Enjoy!
 
+### Another running method
+
+- Clone the repo using git clone.
+- Type the following command:
+    \FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug
+- Then run the FlightInspectionApp.exe
+
 ## Future improvements:
 
 As we continue to work on this app, we encourage anyone that wants to help out to do so!
