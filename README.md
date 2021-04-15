@@ -68,7 +68,9 @@ The user who prepares the CSdll.dll file should make sure that in the first line
 
 - Clone the repo using git clone.
 - Type the following command:
-    \FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug
+
+> cd \FlightInspectionApp\FlightInspectionApp\FlightInspectionApp\bin\x86\Debug
+
 - Then run the FlightInspectionApp.exe
 
 ## Future improvements:
